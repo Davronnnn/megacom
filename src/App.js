@@ -1,10 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Main from './sections/Main';
+import HomePage from './HomePage';
 
 function App() {
-	return (
-		<Main />
-	);
+	return <HomePage />;
 }
 
 export default App;

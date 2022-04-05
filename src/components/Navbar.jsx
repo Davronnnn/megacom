@@ -6,7 +6,6 @@ import './Navbar.scss';
 
 const Navbar = () => {
 	return (
-		<Layout>
 			<nav>
 				<img src={logo} alt='Megacom' />
 				<div className='nav-links'>
@@ -17,7 +16,6 @@ const Navbar = () => {
 					<p>Условия и положения</p>
 				</div>
 			</nav>
-		</Layout>
 	);
 };
 

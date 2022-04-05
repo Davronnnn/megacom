@@ -1,0 +1,31 @@
+.section-header {
+	&__titles {
+		&-title {
+			font-family: 'Roboto';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 60px;
+			line-height: 70px;
+			/* identical to box height, or 117% */
+
+			text-align: center;
+
+			color: #19191b;
+		}
+		&-subtitle {
+			font-family: 'Roboto';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 28px;
+			/* identical to box height, or 156% */
+
+			font-feature-settings: 'liga' off;
+
+			/* Neutral/700 */
+
+			color: #374151;
+			text-align: center;
+		}
+	}
+}
