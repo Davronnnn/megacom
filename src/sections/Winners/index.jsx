@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import SectionHeader from '../../components/SectionHeader';
 import WinnerTable from '../../components/WinnerTable';
+import './winner.scss';
 
 const WinnersList = () => {
 	return (

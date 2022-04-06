@@ -1,0 +1,29 @@
+.question-card {
+	// display: flex;
+	// justify-content: center;
+	// text-align: center;
+	// flex-direction: column;
+
+	text-align: center;
+	padding: 30px;
+	margin: 0 50px;
+	h1 {
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 34px;
+		line-height: 28px;
+		/* identical to box height, or 82% */
+
+		text-align: center;
+
+		color: #2d1d3f;
+	}
+	p {
+		text-align: center;
+	}
+	.circle {
+		img {
+		}
+	}
+}

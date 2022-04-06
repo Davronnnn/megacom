@@ -1,14 +1,15 @@
 import React from 'react';
-import QuestionCard from '../../components/QuestionCard';
+import QuestionCard from '../../components/QuestionCard/index';
 import SectionHeader from '../../components/SectionHeader';
+import './registration.scss';
 
 const Registration = () => {
 	return (
-		<section className='registration-section'>
+		<section className='registration-section mtb'>
 			<SectionHeader
 				title='Как принять участие'
 				subtitle='UzMillion Начните прямо сейчас! Это просто!'>
-				<div className='flex'>
+				<div className='flex mt'>
 					<QuestionCard
 						title='Абонент Uztelecom'
 						subtitle='Если Вы являетесь абонентом Uztelecom, отправьте SMS на 2020!'

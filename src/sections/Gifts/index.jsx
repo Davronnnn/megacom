@@ -2,6 +2,8 @@ import React from 'react';
 import Card from '../../components/Card/index.jsx';
 import SectionHeader from '../../components/SectionHeader';
 import messageImg from '../../assets/message-coins.png';
+import './gifts.scss';
+
 const Gift = () => {
 	return (
 		<section className='gifts-section'>
@@ -20,21 +22,18 @@ const Gift = () => {
 						price='100 000 сум'
 						subtitle='Каждый месяц участник, набравший наибольшее количество баллов за соответствующий последний недельный период месяца, станет победителем 50 000 000 сум!'></Card>
 				</div>
+				<div className='message flex mtb'>
+					<div className='coin-title '>
+						<h1>Отправьте sms на 2020!</h1>
+						<p>
+							Наберите наибольшее количество баллов и выиграйте!
+						</p>
+					</div>
+					<div className='coin-image'>
+						<img src={messageImg} alt='coins' />
+					</div>
+				</div>
 			</SectionHeader>
-
-			<div className='message flex'>
-				<div>
-					<h1>Отправьте sms на 2020!</h1>
-					<p>
-						font-family: 'Roboto'; font-style: normal; font-weight:
-						400; font-size: 17px; line-height: 20px; color: rgba(45,
-						29, 63, 0.8);
-					</p>
-				</div>
-				<div>
-					<img src={messageImg} alt='coins' />
-				</div>
-			</div>
 		</section>
 	);
 };
