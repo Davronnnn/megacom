@@ -88,7 +88,7 @@ const Questions = () => {
 					призов (по 50 000 000 сум) и 1 мега приз (двухкомнатная
 					квартира в Ташкенте).
 				</Accordion>
-				<div className='question-section__link'>
+				<div className='question-section__link mb mt-5'>
 					<a href='/'>
 						Все вопросы и ответы
 						<img src={questionArrow} alt='arrow' />

@@ -2,12 +2,15 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import Navbar from '../../components/Navbar';
 import './Main.scss';
-
+import card1 from '../../assets/kiario.png';
+import card2 from '../../assets/homeCard.png';
 const Main = () => {
 	return (
 		<section className='main-section'>
 			<Layout>
 				<Navbar />
+				<img id='card1' src={card1} alt='kiario' />
+				<img id='card2' src={card2} alt='card2' />
 				<div className='main-section__title'>
 					<h1>Мега приз двух комнатная квартира в Ташкенте!</h1>
 					<p>
