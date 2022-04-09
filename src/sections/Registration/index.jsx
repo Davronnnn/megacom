@@ -9,7 +9,7 @@ const Registration = () => {
 			<SectionHeader
 				title='Как принять участие'
 				subtitle='UzMillion Начните прямо сейчас! Это просто!'>
-				<div className='flex align-items-top mt'>
+				<div className='flex question-cards align-items-top mt'>
 					<QuestionCard
 						title='Абонент Uztelecom'
 						subtitle='Если Вы являетесь абонентом Uztelecom, отправьте SMS на 2020!'

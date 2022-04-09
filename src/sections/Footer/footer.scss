@@ -1,7 +1,8 @@
 footer {
 	background-color: #f3f8fe;
+	padding: 20px 0;
 	.footer-main {
-		padding: 20px;
+		padding: 20px 40px;
 		justify-content: space-between;
 		p {
 			font-family: 'Roboto';
@@ -17,7 +18,7 @@ footer {
 			border: 1px solid #20bf6b;
 			border-radius: 10px;
 			color: #fff;
-			padding: 10px 50px;
+			padding: 5px 7vw;
 			display: flex;
 			align-items: center;
 			justify-content: space-around;

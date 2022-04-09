@@ -13,6 +13,8 @@
 	margin: 3%;
 	min-height: 600px;
 
+	width: 100%;
+
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -22,7 +24,6 @@
 		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
 			0 10px 10px rgba(0, 0, 0, 0.22);
 		background-color: #58227a;
-
 		h1,
 		p {
 			color: #fff;

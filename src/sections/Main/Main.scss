@@ -12,13 +12,12 @@
 		position: absolute;
 		top: 20%;
 		right: -5%;
-		width: 450px;
 	}
 	#card2 {
 		position: absolute;
-		bottom: -30%;
+		bottom: -90%;
 		right: 30%;
-		width: 430px;
+		width: 500px;
 	}
 
 	.layout {
@@ -26,7 +25,7 @@
 	}
 	&__title {
 		position: relative;
-		width: 60%;
+		width: 50%;
 		margin: 25vh 5vw 0 0;
 
 		h1 {
@@ -34,8 +33,8 @@
 
 			font-style: normal;
 			font-weight: 700;
-			font-size: 60px;
-			line-height: 72px;
+			font-size: 40px;
+			line-height: 45px;
 			/* or 120% */
 
 			font-feature-settings: 'liga' off;
@@ -48,8 +47,8 @@
 			font-family: 'Roboto';
 			font-style: normal;
 			font-weight: 600;
-			font-size: 18px;
-			line-height: 28px;
+			font-size: 0.8rem;
+			line-height: 1.2rem;
 			/*	or 156% */
 
 			font-feature-settings: 'liga' off;
@@ -58,7 +57,7 @@
 
 			color: #374151;
 
-			width: 80%;
+			width: 90%;
 		}
 	}
 	&__buttons {
@@ -93,6 +92,112 @@
 
 				color: #58227a;
 				width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 2560px) {
+	.main-section {
+		#card1 {
+			position: absolute;
+			top: 20%;
+			right: -5%;
+		}
+		#card2 {
+			position: absolute;
+			bottom: -40%;
+			right: 30%;
+			width: 500px;
+		}
+		&__title {
+			position: relative;
+			width: 40%;
+			margin: 25vh 5vw 0 0;
+
+			h1 {
+				font-family: 'Roboto ';
+
+				font-style: normal;
+				font-weight: 700;
+				font-size: 80px;
+				line-height: 92px;
+				/* or 120% */
+
+				font-feature-settings: 'liga' off;
+
+				/* Neutral/900 */
+
+				color: #111827;
+			}
+			p {
+				font-family: 'Roboto';
+				font-style: normal;
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 32px;
+				/*	or 156% */
+
+				font-feature-settings: 'liga' off;
+
+				/* Neutral/700 */
+
+				color: #374151;
+
+				width: 80%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 2559px) and (min-width: 1920px) {
+	.main-section {
+		#card1 {
+			position: absolute;
+			top: 20%;
+			right: -5%;
+		}
+		#card2 {
+			position: absolute;
+			bottom: -40%;
+			right: 30%;
+			width: 500px;
+		}
+		&__title {
+			position: relative;
+			width: 40%;
+			margin: 25vh 5vw 0 0;
+
+			h1 {
+				font-family: 'Roboto ';
+
+				font-style: normal;
+				font-weight: 700;
+				font-size: 60px;
+				line-height: 72px;
+				/* or 120% */
+
+				font-feature-settings: 'liga' off;
+
+				/* Neutral/900 */
+
+				color: #111827;
+			}
+			p {
+				font-family: 'Roboto';
+				font-style: normal;
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 28px;
+				/*	or 156% */
+
+				font-feature-settings: 'liga' off;
+
+				/* Neutral/700 */
+
+				color: #374151;
+
+				width: 80%;
 			}
 		}
 	}

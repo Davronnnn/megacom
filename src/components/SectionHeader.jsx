@@ -7,8 +7,12 @@ const SectionHeader = ({ title, subtitle, children }) => {
 		<div className='section-header'>
 			<Layout>
 				<div className='section-header__titles'>
-					<h1 className='section-header__titles-title'>{title}</h1>
-					<p className='section-header__titles-subtitle'>{subtitle}</p>
+					<h1 className='section-header__titles-title wow fadeInUp'>
+						{title}
+					</h1>
+					<p className='section-header__titles-subtitle'>
+						{subtitle}
+					</p>
 				</div>
 				{children}
 			</Layout>

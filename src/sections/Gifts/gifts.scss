@@ -1,10 +1,10 @@
 .gifts-section {
 	.message {
-        
-		display: flex;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
 		justify-content: space-between;
 		align-items: center;
-		padding: 30px;
+		// padding: 10px;
 		background: #f3f8fe;
 		border-radius: 12px;
 

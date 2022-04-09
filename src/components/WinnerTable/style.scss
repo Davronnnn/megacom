@@ -3,7 +3,7 @@
 	// grid-template-columns: 1fr 4fr 4fr 3fr;
 
 	.table-striped tbody tr:nth-of-type(odd) {
-		background-color: #fff;
+		background-color: #fff !important;
 	}
 	table {
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -28,9 +28,9 @@
 	tbody {
 		background: #f3f8fe;
 		border: none;
-		tr {
-			// border: none;;
-		}
+		// tr {
+		// 	// border: none;;
+		// }
 		th {
 			font-family: 'Roboto';
 			font-style: normal;
