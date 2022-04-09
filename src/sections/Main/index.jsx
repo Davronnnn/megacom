@@ -2,15 +2,30 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import Navbar from '../../components/Navbar';
 import './Main.scss';
-import card1 from '../../assets/kiario.png';
-import card2 from '../../assets/homeCard.png';
+import card1 from '../../assets/header-card1.png';
+import star from '../../assets/star.png';
 const Main = () => {
 	return (
 		<section className='main-section'>
 			<Layout>
 				<Navbar />
-				<img id='card1' src={card1} alt='kiario' />
-				<img id='card2' src={card2} alt='card2' />
+				<button className='header-card1'>
+					<img src={card1} alt='icon' />
+					<div>
+						<p>12 автомобилей </p>
+						<h4>KIA RIO</h4>
+					</div>
+				</button>
+				<button className='header-card2'>
+					<div>
+						<h3>20 000 000 сум приз!</h3>
+					</div>
+					<div className='main'>
+						<img src={star} alt='icon' />
+						<p>4.9 </p>
+						<span>(15k участников)</span>
+					</div>
+				</button>
 				<div className='main-section__title'>
 					<h1>
 						<span
