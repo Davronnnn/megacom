@@ -1,10 +1,14 @@
 .gifts-section {
-	.message {
+	.cards {
+		// padding: 0 10%;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 50px;
+	}
+	.message {
 		justify-content: space-between;
 		align-items: center;
-		// padding: 10px;
+		padding: 30px;
 		background: #f3f8fe;
 		border-radius: 12px;
 
@@ -39,3 +43,21 @@
 		}
 	}
 }
+
+@media screen and (min-width: 2560px) {
+	.gifts-section {
+		.cards {
+			padding: 0 10%;
+		}
+	}
+}
+
+@media screen and (max-width: 2559px) and (min-width: 1920px) {
+	.gifts-section {
+		.cards {
+			padding: 0 10%;
+		}
+	}
+}
+
+

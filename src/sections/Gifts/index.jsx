@@ -8,7 +8,7 @@ const Gift = () => {
 	return (
 		<section className='gifts-section'>
 			<SectionHeader title='Призы'>
-				<div className='cards flex-c-around'>
+				<div className='cards '>
 					<Card
 						title='Каждый день'
 						price='10 000 сум'

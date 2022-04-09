@@ -4,7 +4,7 @@ import './style.scss';
 const WinnerTable = () => {
 	return (
 		<div className='winner-table'>
-			<table class='table table-striped'>
+			<table class='table table-striped wow fadeIn'>
 				<thead>
 					<tr>
 						<th scope='col'></th>

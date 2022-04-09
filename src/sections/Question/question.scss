@@ -1,4 +1,10 @@
 .question-section {
+	.section-header__titles {
+		margin: 0 25%;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 60px;
+	}
 	&__link {
 		a {
 			font-family: 'Roboto';
@@ -13,6 +19,24 @@
 			img {
 				margin-left: 7px;
 			}
+		}
+	}
+}
+@media screen and (min-width: 2560px) {
+	.gifts-section {
+		.cards {
+			padding: 0 10%;
+		}
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.question-section {
+		.section-header__titles {
+			margin: 0 30%;
+			display: flex;
+			justify-content: center;
+			margin-bottom: 60px;
 		}
 	}
 }
