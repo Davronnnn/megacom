@@ -8,11 +8,11 @@ import Questions from './sections/Question';
 import Footer from './sections/Footer';
 import WOW from 'wowjs';
 import axios from 'axios';
-
+import FormSection from './sections/Form';
 const HomePage = () => {
 	const [load, setLoad] = useState(true);
 	const [text, setText] = useState([]);
-
+	const lang = localStorage.getItem('lang');
 	useEffect(() => {
 		new WOW.WOW({
 			live: false,
@@ -20,6 +20,7 @@ const HomePage = () => {
 
 		axios
 			.get('https://backend.megacom.win/translation/get-words')
+
 			.then((res) => {
 				setText(res.data);
 				console.log(res.data);
@@ -39,6 +40,7 @@ const HomePage = () => {
 			<WinnersList text={text} />
 			<Registration text={text} />
 			<Questions text={text} />
+			<FormSection text={text} lang={lang} />
 			<Footer text={text} />
 		</div>
 	);

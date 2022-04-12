@@ -29,7 +29,7 @@ const Navbar = ({ load, setLoad, text }) => {
 							spy={true}
 							smooth={true}
 							offset={50}
-							duration={1000}>
+							duration={500}>
 							<p>{text[0]?.uz_text}</p>
 						</Link>
 						<Link
@@ -37,7 +37,7 @@ const Navbar = ({ load, setLoad, text }) => {
 							spy={true}
 							smooth={true}
 							offset={50}
-							duration={2000}>
+							duration={1000}>
 							<p>{text[1]?.uz_text}</p>
 						</Link>
 						<Link
@@ -45,7 +45,7 @@ const Navbar = ({ load, setLoad, text }) => {
 							spy={true}
 							smooth={true}
 							offset={50}
-							duration={2000}>
+							duration={1500}>
 							<p>{text[2]?.uz_text}</p>
 						</Link>
 						<Link
