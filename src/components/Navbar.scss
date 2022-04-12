@@ -7,6 +7,7 @@ nav {
 		line-height: 20px;
 		background: transparent;
 		border: none;
+		color: #111827;
 
 		&:focus {
 			outline: none;
@@ -22,11 +23,11 @@ nav {
 		margin: 0 5vw;
 
 		p {
+			cursor: pointer;
 			font-family: 'Roboto';
 			font-style: normal;
 			font-weight: 600;
-			font-size: 20px;
-			line-height: 20px;
+			font-size: 16px;
 			/* identical to box height, or 100% */
 
 			font-feature-settings: 'liga' off;
@@ -43,6 +44,15 @@ nav {
 			margin: 0px 4px;
 
 			margin: 0 20px;
+		}
+	}
+}
+@media (min-width: 1920px) {
+	nav {
+		.nav-links {
+			p {
+				font-size: 20px;
+			}
 		}
 	}
 }

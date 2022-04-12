@@ -17,13 +17,16 @@ const HomePage = () => {
 		new WOW.WOW({
 			live: false,
 		}).init();
-	}, []);
 
-	useEffect(() => {
 		axios
 			.get('https://backend.megacom.win/translation/get-words')
 			.then((res) => {
 				setText(res.data);
+				console.log(res.data);
+				setLoad(false);
+			})
+			.catch((err) => {
+				console.log(err);
 				setLoad(false);
 			});
 	}, [load]);
