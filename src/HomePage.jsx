@@ -10,7 +10,7 @@ import WOW from 'wowjs';
 import axios from 'axios';
 import FormSection from './sections/Form';
 const HomePage = () => {
-	const [load, setLoad] = useState(true);
+	const [load, setLoad] = useState(false);
 	const [text, setText] = useState([]);
 	const lang = localStorage.getItem('lang')
 		? localStorage.getItem('lang')
