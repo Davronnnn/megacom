@@ -3,12 +3,28 @@ import Accordion from '../../components/Accordion';
 import SectionHeader from '../../components/SectionHeader';
 import './question.scss';
 import questionArrow from '../../assets/questionarrow.png';
-const Questions = () => {
+const Questions = ({text}) => {
+
+	var lang = localStorage.getItem("lang")
+
+	if (lang === "uz"){
+		var sec_title = text[34]?.uz_text
+	}
+	if (lang === "ru"){
+		sec_title = text[34]?.ru_text
+	}
+	if (lang === "en"){
+		sec_title = text[34]?.en_text
+	}
+	if (lang === "kz"){
+		sec_title = text[34]?.kyr_text
+	}
+
 	return (
 		<section className='question-section'>
-			<SectionHeader title='Часто задаваемые вопросы'>
+			<SectionHeader title={sec_title}>
 				<Accordion title={'Что такое услуга «UzMillion»?'}>
-					Всего призов 730! В первом этапе Услуги 78 ежедневных призов
+					Всего призов 730	! В первом этапе Услуги 78 ежедневных призов
 					(2 000 000 сум) и 12 еженедельных призов (30 000 000 сум).
 					Во втором этапе Услуги 77 ежедневных призов (по 3 000 000
 					сум) и 13 еженедельных призов (по 25 000 000 сум). В третьем

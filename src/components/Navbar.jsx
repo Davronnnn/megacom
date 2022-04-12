@@ -21,7 +21,7 @@ const Navbar = ({ load, setLoad, text }) => {
         <nav>
             <img src={logo} alt="Megacom" />
             <div className="nav-links">
-                {lang == "uz" ? (
+                {lang === "uz" ? (
                     <>
                         <p>{text[0]?.uz_text}</p>
                         <p>{text[1]?.uz_text}</p>
@@ -32,7 +32,7 @@ const Navbar = ({ load, setLoad, text }) => {
                 ) : (
                     ""
                 )}
-				{lang == "en" ? (
+				{lang === "en" ? (
                     <>
                         <p>{text[0]?.en_text}</p>
                         <p>{text[1]?.en_text}</p>
@@ -43,7 +43,7 @@ const Navbar = ({ load, setLoad, text }) => {
                 ) : (
                     ""
                 )}
-				{lang == "kz" ? (
+				{lang === "kz" ? (
                     <>
                         <p>{text[0]?.kyr_text}</p>
                         <p>{text[1]?.kyr_text}</p>
@@ -54,7 +54,7 @@ const Navbar = ({ load, setLoad, text }) => {
                 ) : (
                     ""
                 )}
-				{lang == "ru" ? (
+				{lang === "ru" ? (
                     <>
                         <p>{text[0]?.ru_text}</p>
                         <p>{text[1]?.ru_text}</p>
