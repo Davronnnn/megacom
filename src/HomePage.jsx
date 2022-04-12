@@ -22,7 +22,7 @@ const HomePage = () => {
 	
 	useEffect(() => {
 		
-		axios.get("http://backend.megacom.win/translation/get-words")
+		axios.get("https://backend.megacom.win/translation/get-words")
 		.then(res => {
 			setText(res.data)
 		})
