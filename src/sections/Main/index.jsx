@@ -35,10 +35,10 @@ const Main = ({ load, setLoad, text }) => {
                             data-wow-duration="0.5s"
                             data-wow-delay="0.2s"
                         >
-                            {lang == "uz" ? text[5]?.uz_text : ""}
-                            {lang == "ru" ? text[5]?.ru_text : ""}
-                            {lang == "en" ? text[5]?.en_text : ""}
-                            {lang == "kz" ? text[5]?.kyr_text : ""}
+                            {lang === "uz" ? text[5]?.uz_text : ""}
+                            {lang === "ru" ? text[5]?.ru_text : ""}
+                            {lang === "en" ? text[5]?.en_text : ""}
+                            {lang === "kz" ? text[5]?.kyr_text : ""}
                         </span>
                     </h1>
                     <p
@@ -46,24 +46,24 @@ const Main = ({ load, setLoad, text }) => {
                         data-wow-duration="0.6s"
                         data-wow-delay="0.3s"
                     >
-                        {lang == "uz" ? text[6]?.uz_text : ""}
-                        {lang == "ru" ? text[6]?.ru_text : ""}
-                        {lang == "en" ? text[6]?.en_text : ""}
-                        {lang == "kz" ? text[6]?.kyr_text : ""}
+                        {lang === "uz" ? text[6]?.uz_text : ""}
+                        {lang === "ru" ? text[6]?.ru_text : ""}
+                        {lang === "en" ? text[6]?.en_text : ""}
+                        {lang === "kz" ? text[6]?.kyr_text : ""}
                     </p>
                     <div className="main-section__buttons">
                         <button>
-                            {lang == "uz" ? text[7]?.uz_text : ""}
-                            {lang == "ru" ? text[7]?.ru_text : ""}
-                            {lang == "en" ? text[7]?.en_text : ""}
-                            {lang == "kz" ? text[7]?.kyr_text : ""}
+                            {lang === "uz" ? text[7]?.uz_text : ""}
+                            {lang === "ru" ? text[7]?.ru_text : ""}
+                            {lang === "en" ? text[7]?.en_text : ""}
+                            {lang === "kz" ? text[7]?.kyr_text : ""}
                         </button>
                         <span>
                             <p>
-                                {lang == "uz" ? text[8]?.uz_text : ""}
-                                {lang == "ru" ? text[8]?.ru_text : ""}
-                                {lang == "en" ? text[8]?.en_text : ""}
-                                {lang == "kz" ? text[8]?.kyr_text : ""}
+                                {lang === "uz" ? text[8]?.uz_text : ""}
+                                {lang === "ru" ? text[8]?.ru_text : ""}
+                                {lang === "en" ? text[8]?.en_text : ""}
+                                {lang === "kz" ? text[8]?.kyr_text : ""}
                             </p>
                             <p>(78) 150-24-35</p>
                         </span>

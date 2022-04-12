@@ -35,10 +35,10 @@ const HomePage = () => {
 		<div>
 			<Main load={load} setLoad={setLoad} text={text} />
 			<Gift text={text} />
-			<WinnersList />
-			<Registration />
-			<Questions />
-			<Footer />
+			<WinnersList text={text} />
+			<Registration text={text} />
+			<Questions text={text} />
+			<Footer text={text} />
 		</div>
 	);
 };

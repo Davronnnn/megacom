@@ -3,16 +3,63 @@ import QuestionCard from '../../components/QuestionCard/index';
 import SectionHeader from '../../components/SectionHeader';
 import './registration.scss';
 
-const Registration = () => {
+const Registration = ({text}) => {
+
+	var lang = localStorage.getItem("lang")
+
+	if (lang === "uz"){
+		var title = text[26]?.uz_text
+		var subtitle = text[27]?.uz_text
+		var title2 = text[28]?.uz_text
+		var subtitle2 = text[29]?.uz_text
+		var title3 = text[32]?.uz_text
+		var subtitle3 = text[33]?.uz_text
+		var title4 = text[32]?.uz_text
+		var subtitle4 = text[33]?.uz_text
+	}
+	if (lang === "ru"){
+		title = text[26]?.ru_text
+		subtitle = text[27]?.ru_text
+		title2 = text[28]?.ru_text
+		subtitle2 = text[29]?.ru_text
+		title3 = text[30]?.ru_text
+		subtitle3 = text[31]?.ru_text
+		title4 = text[32]?.ru_text
+		subtitle4 = text[33]?.ru_text
+	}
+	if (lang === "en"){
+		title = text[26]?.en_text
+		subtitle = text[27]?.en_text
+		title2 = text[28]?.en_text
+		subtitle2 = text[29]?.en_text
+		title3 = text[30]?.en_text
+		subtitle3 = text[31]?.en_text
+		title4 = text[32]?.en_text
+		subtitle4 = text[33]?.en_text
+	}
+	if (lang === "kz"){
+		title = text[26]?.kyr_text
+		subtitle = text[27]?.kyr_text
+		title2 = text[28]?.kyr_text
+		subtitle2 = text[29]?.kyr_text
+		title3 = text[30]?.kyr_text
+		subtitle3 = text[31]?.kyr_text
+		title4 = text[32]?.kyr_text
+		subtitle4 = text[33]?.kyr_text
+		
+	}
+
+	
+
 	return (
 		<section className='registration-section mtb'>
 			<SectionHeader
-				title='Как принять участие'
-				subtitle='UzMillion Начните прямо сейчас! Это просто!'>
+				title={title}
+				subtitle={subtitle}>
 				<div className='flex question-cards align-items-top mt'>
 					<QuestionCard
-						title='Абонент Uztelecom'
-						subtitle='Если Вы являетесь абонентом Uztelecom, отправьте SMS на 2020!'
+						title={title2}
+						subtitle={subtitle2}
 						index={1}
 					/>
 					<svg
@@ -30,8 +77,8 @@ const Registration = () => {
 					</svg>
 
 					<QuestionCard
-						title='После регистрации'
-						subtitle='Вы получите информативное SMS-сообщение, после чего на Ваш персональный счет для баллов будут зачислены Ваши первые баллы! С этого момента Вы начнете ежедневно набирать баллы на Призовые Конкурсы!'
+						title={title3}
+						subtitle={subtitle3}
 						index={2}
 					/>
 					<svg
@@ -49,8 +96,8 @@ const Registration = () => {
 					</svg>
 
 					<QuestionCard
-						title='Увеличить баллы'
-						subtitle='Чтобы увеличить свои баллы Вам нужно правильно отвечать на интересные вопросы Викторины! За один день вы можете отвечать на 20 вопросов бесплатно.'
+						title={title4}
+						subtitle={subtitle4}
 						index={3}
 					/>
 				</div>
