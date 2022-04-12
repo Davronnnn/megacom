@@ -66,7 +66,7 @@ const Navbar = ({ load, setLoad, text }) => {
                     ""
                 )}
 
-                <select name="" id="lang" onChange={() => translation()}>
+                <select name="" id="lang" onChange={() => translation()} value={lang}>
                     <option value="uz">uz</option>
                     <option value="ru">ru</option>
                     <option value="en">en</option>
