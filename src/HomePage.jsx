@@ -12,7 +12,9 @@ import FormSection from './sections/Form';
 const HomePage = () => {
 	const [load, setLoad] = useState(true);
 	const [text, setText] = useState([]);
-	const lang = localStorage.getItem('lang');
+	const lang = localStorage.getItem('lang')
+		? localStorage.getItem('lang')
+		: 'uz';
 	useEffect(() => {
 		new WOW.WOW({
 			live: false,
