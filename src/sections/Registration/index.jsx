@@ -45,14 +45,14 @@ const Registration = ({ text }) => {
 		subtitle4 = text[33]?.en_text;
 	}
 	if (lang === 'kz') {
-		title = text[26]?.kyr_text;
-		subtitle = text[27]?.kyr_text;
-		title2 = text[28]?.kyr_text;
-		subtitle2 = text[29]?.kyr_text;
-		title3 = text[30]?.kyr_text;
-		subtitle3 = text[31]?.kyr_text;
-		title4 = text[32]?.kyr_text;
-		subtitle4 = text[33]?.kyr_text;
+		title = text[26]?.kg_text;
+		subtitle = text[27]?.kg_text;
+		title2 = text[28]?.kg_text;
+		subtitle2 = text[29]?.kg_text;
+		title3 = text[30]?.kg_text;
+		subtitle3 = text[31]?.kg_text;
+		title4 = text[32]?.kg_text;
+		subtitle4 = text[33]?.kg_text;
 	}
 
 	return (

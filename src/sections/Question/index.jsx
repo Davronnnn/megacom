@@ -16,7 +16,7 @@ const Questions = ({ text }) => {
 		sec_title = text[34]?.en_text;
 	}
 	if (lang === 'kz') {
-		sec_title = text[34]?.kyr_text;
+		sec_title = text[34]?.kg_text;
 	}
 
 	return (
