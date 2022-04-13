@@ -12,13 +12,14 @@ import FormSection from './sections/Form';
 const HomePage = () => {
 	const [load, setLoad] = useState(false);
 	const [text, setText] = useState([]);
-	const lang = localStorage.getItem('lang');
+	
+	const [lang,setLang] = useState(localStorage.getItem('lang'));
 
 	useEffect(() => {
 		new WOW.WOW({
 			live: false,
 		}).init();
-
+		setLang(localStorage.getItem('lang'))
 		axios
 			.get('https://backend.megacom.win/translation/get-words')
 			.then((res) => {
@@ -35,24 +36,24 @@ const HomePage = () => {
 	if (load)
 		return (
 			<div>
-				<Main load={load} setLoad={setLoad} text={text} />
-				<Gift text={text} />
-				<WinnersList text={text} />
-				<Registration text={text} />
-				<Questions text={text} />
+				<Main load={load} setLoad={setLoad} text={text} lang={lang} />
+				<Gift text={text} lang={lang} />
+				<WinnersList text={text} lang={lang} />
+				<Registration text={text} lang={lang} />
+				<Questions text={text} lang={lang} />
 				<FormSection text={text} lang={lang} />
-				<Footer text={text} />
+				<Footer text={text} lang={lang} />
 			</div>
 		);
 	return (
 		<div>
-			<Main load={load} setLoad={setLoad} text={text} />
-			<Gift text={text} />
-			<WinnersList text={text} />
-			<Registration text={text} />
-			<Questions text={text} />
+			<Main load={load} setLoad={setLoad} text={text} lang={lang} />
+			<Gift text={text} lang={lang} />
+			<WinnersList text={text} lang={lang} />
+			<Registration text={text} lang={lang} />
+			<Questions text={text} lang={lang} />
 			<FormSection text={text} lang={lang} />
-			<Footer text={text} />
+			<Footer text={text} lang={lang} />
 		</div>
 	);
 };
