@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../assets/logo.png';
 import './Navbar.scss';
 import { useEffect, useState } from 'react';
-// import { Link } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 const Navbar = ({ load, setLoad, text }) => {
 	const [lang, setLang] = useState(
@@ -12,13 +12,13 @@ const Navbar = ({ load, setLoad, text }) => {
 	function translation(e) {
 		localStorage.setItem('lang', e.target.value);
 		setLang(e.target.value);
-        setLoad(true)
+		setLoad(true);
 	}
 
 	return (
 		<nav>
 			<img src={logo} alt='Megacom' />
-			{/* <div className='nav-links'>
+			<div className='nav-links'>
 				{lang === 'uz' ? (
 					<>
 						<Link
@@ -214,7 +214,7 @@ const Navbar = ({ load, setLoad, text }) => {
 					<option value='en'>en</option>
 					<option value='kz'>kg</option>
 				</select>
-			</div> */}
+			</div>
 		</nav>
 	);
 };
