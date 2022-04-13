@@ -4,12 +4,12 @@ import Navbar from '../../components/Navbar';
 import './Main.scss';
 import card1 from '../../assets/header-card1.png';
 import star from '../../assets/star.png';
-const Main = ({ load, setLoad, text,lang}) => {
-
+const Main = () => {
 	return (
 		<section className='main-section'>
 			<Layout>
-				<Navbar load={load} setLoad={setLoad} text={text} />
+				{/* <Navbar 
+				load={load} setLoad={setLoad} text={text} /> */}
 				<button className='header-card1'>
 					<img src={card1} alt='icon' />
 					<div>
@@ -27,7 +27,7 @@ const Main = ({ load, setLoad, text,lang}) => {
 						<span>(15k участников)</span>
 					</div>
 				</button>
-				<div className='main-section__title'>
+				{/* <div className='main-section__title'>
 					<h1>
 						<span
 							className='wow bounceInUp'
@@ -65,7 +65,7 @@ const Main = ({ load, setLoad, text,lang}) => {
 							<p>(78) 150-24-35</p>
 						</span>
 					</div>
-				</div>
+				</div> */}
 			</Layout>
 		</section>
 	);
