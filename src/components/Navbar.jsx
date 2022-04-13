@@ -12,7 +12,7 @@ const Navbar = ({ load, setLoad, text }) => {
 	function translation(e) {
 		localStorage.setItem('lang', e.target.value);
 		setLang(e.target.value);
-        setLoad(true)
+		setLoad(true);
 	}
 
 	return (
@@ -119,7 +119,7 @@ const Navbar = ({ load, setLoad, text }) => {
 							smooth={true}
 							offset={50}
 							duration={2000}>
-							<p>{text[0]?.kg_text}</p>
+							<p>{text[0]?.kyr_text}</p>
 						</Link>
 						<Link
 							to='winners'
@@ -127,7 +127,7 @@ const Navbar = ({ load, setLoad, text }) => {
 							smooth={true}
 							offset={50}
 							duration={2000}>
-							<p>{text[1]?.kg_text}</p>
+							<p>{text[1]?.kyr_text}</p>
 						</Link>
 						<Link
 							to='company'
@@ -135,7 +135,7 @@ const Navbar = ({ load, setLoad, text }) => {
 							smooth={true}
 							offset={50}
 							duration={2000}>
-							<p>{text[2]?.kg_text}</p>
+							<p>{text[2]?.kyr_text}</p>
 						</Link>
 						<Link
 							to='question'
@@ -143,7 +143,7 @@ const Navbar = ({ load, setLoad, text }) => {
 							smooth={true}
 							offset={50}
 							duration={2000}>
-							<p>{text[3]?.kg_text}</p>
+							<p>{text[3]?.kyr_text}</p>
 						</Link>
 						<Link
 							to='footer'
@@ -151,7 +151,7 @@ const Navbar = ({ load, setLoad, text }) => {
 							smooth={true}
 							offset={50}
 							duration={2000}>
-							<p>{text[4]?.kg_text}</p>
+							<p>{text[4]?.kyr_text}</p>
 						</Link>
 					</>
 				) : (
@@ -212,7 +212,7 @@ const Navbar = ({ load, setLoad, text }) => {
 					<option value='uz'>uz</option>
 					<option value='ru'>ru</option>
 					<option value='en'>en</option>
-					<option value='kz'>kz</option>
+					<option value='kz'>kg</option>
 				</select>
 			</div>
 		</nav>

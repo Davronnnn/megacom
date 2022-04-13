@@ -22,6 +22,7 @@ const HomePage = () => {
 		setLang(localStorage.getItem('lang'))
 		axios
 			.get('https://backend.megacom.win/translation/get-words')
+
 			.then((res) => {
 				setText(res.data);
 				console.log(res.data);
@@ -33,18 +34,7 @@ const HomePage = () => {
 			});
 	}, [load]);
 
-	if (load)
-		return (
-			<div>
-				<Main load={load} setLoad={setLoad} text={text} lang={lang} />
-				<Gift text={text} lang={lang} />
-				<WinnersList text={text} lang={lang} />
-				<Registration text={text} lang={lang} />
-				<Questions text={text} lang={lang} />
-				<FormSection text={text} lang={lang} />
-				<Footer text={text} lang={lang} />
-			</div>
-		);
+	if (load) return <div></div>;
 	return (
 		<div>
 			<Main load={load} setLoad={setLoad} text={text} lang={lang} />
