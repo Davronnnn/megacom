@@ -13,10 +13,6 @@ const Navbar = ({ load, setLoad, text }) => {
 		setLoad(true)
     }
 
-    useEffect(() => {
-        localStorage.setItem("lang", "en");
-    }, []);
-
     return (
         <nav>
             <img src={logo} alt="Megacom" />
