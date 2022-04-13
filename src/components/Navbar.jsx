@@ -12,11 +12,8 @@ const Navbar = ({ load, setLoad, text }) => {
 	function translation(e) {
 		localStorage.setItem('lang', e.target.value);
 		setLang(e.target.value);
+		setLoad(true);
 	}
-
-	useEffect(() => {
-		localStorage.setItem('lang', 'en');
-	}, []);
 
 	return (
 		<nav>

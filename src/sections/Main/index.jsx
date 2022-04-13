@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '../../components/Layout';
 import Navbar from '../../components/Navbar';
 import './Main.scss';
 import card1 from '../../assets/header-card1.png';
 import star from '../../assets/star.png';
-const Main = ({ load, setLoad, text }) => {
-	var lang = localStorage.getItem('lang');
+const Main = ({ load, setLoad, text,lang}) => {
 
 	return (
 		<section className='main-section'>
