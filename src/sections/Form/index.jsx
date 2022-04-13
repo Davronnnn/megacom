@@ -28,7 +28,7 @@ const FormSection = ({ lang, text }) => {
 						{lang === 'uz' ? text[19]?.uz_text : ''}
 						{lang === 'ru' ? text[19]?.ru_text : ''}
 						{lang === 'en' ? text[19]?.en_text : ''}
-						{lang === 'kz' ? text[19]?.kg_text : ''}
+						{lang === 'kz' ? text[19]?.kyr_text : ''}
 					</h1>
 					<div className='submits'>
 						<input
