@@ -16,7 +16,10 @@ const Footer = ({ text,lang }) => {
 					</p>
 					<button>
 						<img src={arrow} alt='arrow' />
-						Скачать
+						{lang === "ru" ? "Скачать" : ""}
+						{lang === "uz" ? "Yuklab olish" : ""}
+						{lang === "en" ? "Download" : ""}
+						{lang === "kz" ? "Жүктөп алуу" : ""}
 					</button>
 				</div>
 				<div className='footer-bottom'>
