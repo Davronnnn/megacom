@@ -21,7 +21,6 @@ const HomePage = () => {
 
 		axios
 			.get('https://backend.megacom.win/translation/get-words')
-
 			.then((res) => {
 				setText(res.data);
 

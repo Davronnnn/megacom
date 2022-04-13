@@ -214,7 +214,7 @@ const Navbar = ({ load, setLoad, text }) => {
 					<option value='uz'>uz</option>
 					<option value='ru'>ru</option>
 					<option value='en'>en</option>
-					<option value='kz'>kg</option>
+					<option value='kz'>kz</option>
 				</select>
 			</div>
 		</nav>
