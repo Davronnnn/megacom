@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll';
-
+// 
 import './card.scss';
 
 const Card = ({ title, subtitle, price, participate }) => {

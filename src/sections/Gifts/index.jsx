@@ -4,8 +4,8 @@ import SectionHeader from '../../components/SectionHeader';
 import messageImg from '../../assets/message-coins.png';
 import './gifts.scss';
 
-const Gift = ({ text }) => {
-	let lang = localStorage.getItem('lang');
+const Gift = ({ text,lang }) => {
+
 	let title,
 		card_title1,
 		card_title2,

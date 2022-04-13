@@ -4,13 +4,11 @@ import Navbar from '../../components/Navbar';
 import './Main.scss';
 import card1 from '../../assets/header-card1.png';
 import star from '../../assets/star.png';
-const Main = ({ load, lang,setLoad, text }) => {
-	var lang = localStorage.getItem('lang');
-
+const Main = ({ load, lang,setLang,setLoad, text }) => {
 	return (
 		<section className='main-section'>
 			<Layout>
-				<Navbar load={load} setLoad={setLoad} text={text} lang={lang} />
+				<Navbar load={load} text={text} lang={lang} setLoad={setLoad} setLang={setLang} />
 				<button className='header-card1'>
 					<img src={card1} alt='icon' />
 					<div>

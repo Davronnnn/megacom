@@ -2,8 +2,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import './footer.scss';
 import arrow from '.././../assets/arrow.png';
-const Footer = ({ text }) => {
-	var lang = localStorage.getItem('lang');
+const Footer = ({ text,lang }) => {
 
 	return (
 		<footer className='footer'>

@@ -13,29 +13,33 @@ const HomePage = () => {
 	const [load, setLoad] = useState(false);
 	const [text, setText] = useState([]);
 	
-	const [lang,setLang] = useState(localStorage.getItem('lang'));
+	const [lang,setLang] = useState("uz");
 
 	useEffect(() => {
 		new WOW.WOW({
 			live: false,
 		}).init();
-		setLang(localStorage.getItem('lang'))
 		axios
 			.get('https://backend.megacom.win/translation/get-words')
 
 			.then((res) => {
 				setText(res.data);
-				setLoad(false);
 			})
 			.catch((err) => {
-				setLoad(false);
 			});
-	}, [load]);
+	}, []);
+
+	useEffect(() => {
+		setLang(localStorage.getItem("lang"))
+		setLoad(false)
+		console.log(lang)
+	}, [load])
+	
 
 	if (load) return <div></div>;
 	return (
 		<div>
-			<Main load={load} setLoad={setLoad} text={text} lang={lang} />
+			<Main load={load} setLoad={setLang} text={text} setLoad={setLoad} lang={lang} />
 			<Gift text={text} lang={lang} />
 			<WinnersList text={text} lang={lang} />
 			<Registration text={text} lang={lang} />

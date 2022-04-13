@@ -3,8 +3,7 @@ import Accordion from '../../components/Accordion';
 import SectionHeader from '../../components/SectionHeader';
 import './question.scss';
 import questionArrow from '../../assets/questionarrow.png';
-const Questions = ({ text }) => {
-	let lang = localStorage.getItem('lang');
+const Questions = ({ text,lang }) => {
 	let sec_title;
 	if (lang === 'uz') {
 		sec_title = text[34]?.uz_text;
