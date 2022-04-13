@@ -4,16 +4,13 @@ import './Navbar.scss';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 
-const Navbar = ({ load, setLoad, text }) => {
-	const [lang, setLang] = useState(
-		localStorage.getItem('lang') ? localStorage.getItem('lang') : 'uz'
-	);
+const Navbar = ({ load, setLoad, text,lang}) => {
 
 	function translation(e) {
 		localStorage.setItem('lang', e.target.value);
-		setLang(e.target.value);
 		setLoad(true);
 	}
+    console.log(lang)
 
 	return (
 		<nav>

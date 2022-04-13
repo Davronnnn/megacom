@@ -25,11 +25,9 @@ const HomePage = () => {
 
 			.then((res) => {
 				setText(res.data);
-				console.log(res.data);
 				setLoad(false);
 			})
 			.catch((err) => {
-				console.log(err);
 				setLoad(false);
 			});
 	}, [load]);
