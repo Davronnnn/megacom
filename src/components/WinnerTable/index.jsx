@@ -1,7 +1,19 @@
-import React from 'react';
+import axios from 'axios';
+import React, {useEffect,useState} from 'react';
 import './style.scss';
 
 const WinnerTable = ({ text,lang }) => {
+
+	const [winners, setWinnsers] = useState([])
+
+	useEffect(() => {
+		axios.get("https://backend.megacom.win/translation/get-winners")
+
+		.then(res => {
+			setWinnsers(res.data)
+		})
+	} , [])
+
 	return (
 		<div className='winner-table'>
 			<table class='table table-striped wow fadeIn'>
@@ -30,27 +42,17 @@ const WinnerTable = ({ text,lang }) => {
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
+					{ winners.map((winner, index) => 
+						<tr>
 						<th scope='row'></th>
-						<th scope='row'>1</th>
-						<td>09.03.2020</td>
-						<td>09.03.2020</td>
-						<td>09.03.2020</td>
+						<th scope='row'>{index}</th>
+						<td>{winner.phone_number}</td>
+						<td>{winner.date}</td>
+						<td>{winner.prize}</td>
 					</tr>
-					<tr>
-						<th scope='row'></th>
-						<th scope='row'>2</th>
-						<td>998 99****116</td>
-						<td>998 99****116</td>
-						<td>998 99****116</td>
-					</tr>
-					<tr>
-						<th scope='row'></th>
-						<th scope='row'>3</th>
-						<td>2 000 000 UZS</td>
-						<td>2 000 000 UZS</td>
-						<td>2 000 000 UZS</td>
-					</tr>
+					 )}
+					
+					
 				</tbody>
 			</table>
 		</div>

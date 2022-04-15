@@ -38,7 +38,12 @@ const Main = ({ load, lang, setLang, setLoad, text }) => {
                     </div>
                     <div className="main">
                         <img src={star} alt="icon" />
-                        <p>4.9 </p>
+                        <p>
+                            {lang === "uz" ? text[42]?.uz_text : ""}
+                            {lang === "ru" ? text[42]?.ru_text : ""}
+                            {lang === "en" ? text[42]?.en_text : ""}
+                            {lang === "kz" ? text[42]?.kg_text : ""}
+                        </p>
                         <span>
                             ({lang === "uz" ? text[40]?.uz_text : ""}
                             {lang === "ru" ? text[40]?.ru_text : ""}
@@ -84,7 +89,12 @@ const Main = ({ load, lang, setLang, setLoad, text }) => {
                                 {lang === "en" ? text[8]?.en_text : ""}
                                 {lang === "kz" ? text[8]?.kg_text : ""}
                             </p>
-                            <p>(78) 150-24-35</p>
+                            <p>
+                                {lang === "uz" ? text[43]?.uz_text : ""}
+                                {lang === "ru" ? text[43]?.ru_text : ""}
+                                {lang === "en" ? text[43]?.en_text : ""}
+                                {lang === "kz" ? text[43]?.kg_text : ""}
+                            </p>
                         </span>
                     </div>
                 </div>
