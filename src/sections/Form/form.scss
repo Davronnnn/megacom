@@ -1,72 +1,90 @@
-.message {
-	justify-content: space-between;
-	align-items: center;
-	padding: 30px;
-	background: #f3f8fe;
-	border-radius: 12px;
+.form-section {
+	.message {
+		justify-content: space-between;
+		align-items: center;
+		padding: 30px;
+		background: #f3f8fe;
+		border-radius: 12px;
 
-	.coin-title {
-		h1 {
-			font-family: 'Roboto';
-			font-style: normal;
-			font-weight: 600;
-			font-size: 54px;
-			line-height: 63px;
+		.coin-title {
+			h1 {
+				font-family: 'Roboto';
+				font-style: normal;
+				font-weight: 600;
+				font-size: 54px;
+				line-height: 63px;
 
-			color: #2d1d3f;
-		}
-		input {
-			font-family: 'Roboto';
-			font-style: normal;
-			font-weight: 400;
-			font-size: 17px;
+				color: #2d1d3f;
+			}
+			input {
+				font-family: 'Roboto';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 17px;
 
-			color: rgba(45, 29, 63, 0.8);
-			background: transparent;
-			border: 1px solid #732c9f;
-			border-radius: 10px;
-			width: 50%;
-			padding: 10px 20px;
+				color: rgba(45, 29, 63, 0.8);
+				background: transparent;
+				border: 1px solid #732c9f;
+				border-radius: 10px;
+				width: 50%;
+				padding: 10px 20px;
 
-			&:active,
-			&:focus,
-			&:target,
-			&:read-write {
-				color: #732c9f;
+				&:active,
+				&:focus,
+				&:target,
+				&:read-write {
+					color: #732c9f;
+				}
+			}
+			button {
+				background: #fff;
+				border: 1px solid #732c9f;
+				border-radius: 10px;
+
+				font-family: 'Roboto';
+				font-style: normal;
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 24px;
+				/* identical to box height, or 120% */
+
+				text-align: center;
+				font-feature-settings: 'liga' off;
+
+				cursor: pointer;
+				color: #58227a;
+				padding: 10px 20px;
+				margin-left: 30px;
+			}
+
+			.submits {
+				display: flex;
 			}
 		}
-		button {
-			background: #fff;
-			border: 1px solid #732c9f;
-			border-radius: 10px;
 
-			font-family: 'Roboto';
-			font-style: normal;
-			font-weight: 600;
-			font-size: 20px;
-			line-height: 24px;
-			/* identical to box height, or 120% */
-
-			text-align: center;
-			font-feature-settings: 'liga' off;
-
-			cursor: pointer;
-			color: #58227a;
-			padding: 10px 20px;
-			margin-left: 30px;
-		}
-
-		.submits {
-			display: flex;
+		.coin-image {
+			min-height: 150px;
+			img {
+				position: absolute;
+				right: 10%;
+				transform: translateY(-40px);
+			}
 		}
 	}
-
-	.coin-image {
-		min-height: 150px;
-		img {
-			position: absolute;
-			right: 10%;
-			transform: translateY(-40px);
+}
+@media (max-width: 768px) {
+	.form-section {
+		.message {
+			h1 {
+				font-size: 24px !important;
+			}
+			input,
+			button {
+				font-size: 16px !important;
+			}
+			.coin-image {
+				display: none;
+			}
 		}
 	}
 }

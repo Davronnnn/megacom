@@ -1,0 +1,91 @@
+.form-section .message {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  background: #f3f8fe;
+  border-radius: 12px;
+}
+
+.form-section .message .coin-title h1 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 63px;
+  color: #2d1d3f;
+}
+
+.form-section .message .coin-title input {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  color: rgba(45, 29, 63, 0.8);
+  background: transparent;
+  border: 1px solid #732c9f;
+  border-radius: 10px;
+  width: 50%;
+  padding: 10px 20px;
+}
+
+.form-section .message .coin-title input:active, .form-section .message .coin-title input:focus, .form-section .message .coin-title input:target, .form-section .message .coin-title input:-moz-read-write {
+  color: #732c9f;
+}
+
+.form-section .message .coin-title input:active, .form-section .message .coin-title input:focus, .form-section .message .coin-title input:target, .form-section .message .coin-title input:read-write {
+  color: #732c9f;
+}
+
+.form-section .message .coin-title button {
+  background: #fff;
+  border: 1px solid #732c9f;
+  border-radius: 10px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 120% */
+  text-align: center;
+  -webkit-font-feature-settings: 'liga' off;
+          font-feature-settings: 'liga' off;
+  cursor: pointer;
+  color: #58227a;
+  padding: 10px 20px;
+  margin-left: 30px;
+}
+
+.form-section .message .coin-title .submits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form-section .message .coin-image {
+  min-height: 150px;
+}
+
+.form-section .message .coin-image img {
+  position: absolute;
+  right: 10%;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+}
+
+@media (max-width: 768px) {
+  .form-section .message h1 {
+    font-size: 24px !important;
+  }
+  .form-section .message input,
+  .form-section .message button {
+    font-size: 16px !important;
+  }
+  .form-section .message .coin-image {
+    display: none;
+  }
+}
+/*# sourceMappingURL=form.css.map */

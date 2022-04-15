@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-c-around {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.mtb {
+  margin: 120px 0;
+}
+
+.mt {
+  margin-top: 120px;
+}
+
+.mb {
+  margin-bottom: 120px;
+}
+
+@media screen and (max-width: 768px) {
+  .section-header__titles {
+    margin-bottom: 40px;
+  }
+  .gifts-section .cards {
+    padding: 0 10%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .gifts-section .message {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .gifts-section .message .coin-title h1 {
+    font-size: 32px;
+  }
+  .gifts-section .message .coin-title p {
+    font-size: 14px;
+  }
+  .gifts-section .message .coin-image img {
+    right: 20%;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .registration-section .question-cards {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
+  .registration-section .question-cards svg {
+    display: none;
+  }
+  .question-section__link a {
+    font-size: 24px !important;
+  }
+  .accordion .accordion-title {
+    font-size: 24px !important;
+  }
+  .accordion .accordion-content {
+    font-size: 18px !important;
+  }
+  footer .footer-main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  footer .footer-main button {
+    width: 100%;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    font-size: 20px;
+  }
+  .footer-bottom {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=Home.css.map */

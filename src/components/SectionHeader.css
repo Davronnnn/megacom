@@ -1,0 +1,29 @@
+.section-header__titles {
+  margin-bottom: 60px;
+}
+
+.section-header__titles-title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+  /* identical to box height, or 117% */
+  text-align: center;
+  color: #19191b;
+}
+
+.section-header__titles-subtitle {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 156% */
+  -webkit-font-feature-settings: 'liga' off;
+          font-feature-settings: 'liga' off;
+  /* Neutral/700 */
+  color: #374151;
+  text-align: center;
+}
+/*# sourceMappingURL=SectionHeader.css.map */

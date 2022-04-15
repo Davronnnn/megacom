@@ -56,3 +56,16 @@
 		}
 	}
 }
+@media (max-width: 768px) {
+	.winner-table {
+		table {
+		}
+
+		tr,
+		th,
+		td {
+			font-size: 12px !important;
+			line-height: 20px !important;
+		}
+	}
+}

@@ -1,4 +1,7 @@
 nav {
+	.mobile-icon {
+		display: none;
+	}
 	#lang {
 		font-family: 'Roboto';
 		font-style: normal;
@@ -53,6 +56,30 @@ nav {
 			select {
 				font-size: 20px;
 			}
+		}
+	}
+}
+@media (max-width: 1024px) {
+	nav {
+		.nav-links {
+			p,
+			select,
+			#lang {
+				margin: 0 10px;
+				font-size: 10px;
+				text-align: center;
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.mobile-icon {
+		display: flex !important;
+	}
+	nav {
+		justify-content: space-between;
+		.nav-links {
+			display: none;
 		}
 	}
 }

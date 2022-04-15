@@ -1,0 +1,45 @@
+.question-section .section-header__titles {
+  margin: 0 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 60px;
+}
+
+.question-section__link a {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 28px;
+  text-decoration: none;
+  /* identical to box height, or 82% */
+  color: #20bf6b;
+}
+
+.question-section__link a img {
+  margin-left: 7px;
+}
+
+@media screen and (min-width: 2560px) {
+  .gifts-section .cards {
+    padding: 0 10%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .question-section .section-header__titles {
+    margin: 0 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 60px;
+  }
+}
+/*# sourceMappingURL=question.css.map */
