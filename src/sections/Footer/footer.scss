@@ -13,7 +13,7 @@ footer {
 
 			color: #2d1d3f;
 		}
-		button {
+		a {
 			background: #20bf6b;
 			border: 1px solid #20bf6b;
 			border-radius: 10px;
@@ -22,6 +22,7 @@ footer {
 			display: flex;
 			align-items: center;
 			justify-content: space-around;
+			text-decoration: none;
 			img {
 				margin-right: 10px;
 			}

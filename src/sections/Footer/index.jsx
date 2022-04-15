@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../../components/Layout';
 import './footer.scss';
 import arrow from '.././../assets/arrow.png';
-const Footer = ({ text,lang }) => {
+import axios from 'axios';
+const Footer = ({ text, lang }) => {
+	const [file, setFile] = useState('');
+	useEffect(() => {
+		axios
+			.get('https://backend.megacom.win/translation/get-policy-file')
+			.then((res) => {
+				console.log(res.data);
+				setFile(res.data);
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+	}, []);
 
 	return (
 		<footer className='footer'>
@@ -14,13 +27,13 @@ const Footer = ({ text,lang }) => {
 						{lang === 'en' ? text[36]?.en_text : ''}
 						{lang === 'kz' ? text[36]?.kg_text : ''}
 					</p>
-					<button>
+					<a href={file.file}>
 						<img src={arrow} alt='arrow' />
-						{lang === "ru" ? "Скачать" : ""}
-						{lang === "uz" ? "Yuklab olish" : ""}
-						{lang === "en" ? "Download" : ""}
-						{lang === "kz" ? "Жүктөп алуу" : ""}
-					</button>
+						{lang === 'ru' ? 'Скачать' : ''}
+						{lang === 'uz' ? 'Yuklab olish' : ''}
+						{lang === 'en' ? 'Download' : ''}
+						{lang === 'kz' ? 'Жүктөп алуу' : ''}
+					</a>
 				</div>
 				<div className='footer-bottom'>
 					<p style={{ width: '62%' }}>

@@ -4,7 +4,7 @@ import SectionHeader from '../../components/SectionHeader';
 import WinnerTable from '../../components/WinnerTable';
 import './winner.scss';
 
-const WinnersList = ({ text,lang }) => {
+const WinnersList = ({ text, lang }) => {
 	let title = '';
 	let subtitle = '';
 	if (lang === 'uz') {
@@ -28,7 +28,7 @@ const WinnersList = ({ text,lang }) => {
 		<section className='winner-section winners'>
 			<Layout>
 				<SectionHeader title={title} subtitle={subtitle}>
-					<WinnerTable text={text,lang} />
+					<WinnerTable text={text} lang={lang} />
 				</SectionHeader>
 			</Layout>
 		</section>
