@@ -317,3 +317,49 @@
 		}
 	}
 }
+@media screen and (max-width: 768px) {
+	.main-section {
+		&__title {
+			width: 100%;
+			margin: 15vh 5vw;
+			h1 {
+				text-align: center;
+			}
+			p {
+				width: 100%;
+				text-align: center;
+			}
+		}
+		&__buttons {
+			width: 50%;
+		}
+
+		.header-card1 {
+			top: 50%;
+		}
+	}
+}
+@media screen and (max-width: 560px) {
+	.main-section {
+		&__title {
+			width: 100%;
+			margin: 10vh 5vw;
+			h1 {
+				text-align: center;
+			}
+			p {
+				width: 100%;
+				text-align: center;
+			}
+		}
+		&__buttons {
+			width: 100%;
+		}
+
+		.header-card1,
+		.header-card2 {
+			position: relative;
+			top: 100%;
+		}
+	}
+}

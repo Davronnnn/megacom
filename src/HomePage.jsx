@@ -15,7 +15,7 @@ const HomePage = () => {
 	const [load, setLoad] = useState(false);
 	const [text, setText] = useState([]);
 
-	const [lang, setLang] = useState('kg');
+	const [lang, setLang] = useState('kz');
 
 	useEffect(() => {
 		new WOW.WOW({

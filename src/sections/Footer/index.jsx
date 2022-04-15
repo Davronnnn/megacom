@@ -9,7 +9,6 @@ const Footer = ({ text, lang }) => {
 		axios
 			.get('https://backend.megacom.win/translation/get-policy-file')
 			.then((res) => {
-				console.log(res.data);
 				setFile(res.data);
 			})
 			.catch((err) => {

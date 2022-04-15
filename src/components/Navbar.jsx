@@ -307,10 +307,10 @@ const Navbar = ({ load, setLoad, text, lang, setLang }) => {
 					value={lang}
 					id='lang'
 					onChange={(e) => translation(e)}>
-					<option value='uz'>uz</option>
+					<option value='kz'>kg</option>
 					<option value='ru'>ru</option>
 					<option value='en'>en</option>
-					<option value='kz'>kg</option>
+					<option value='uz'>uz</option>
 				</select>
 			</div>
 		</nav>

@@ -35,32 +35,32 @@ const Questions = ({ text, lang }) => {
 		<section className='question-section question'>
 			<SectionHeader title={sec_title}>
 				{lang === 'uz'
-					? faq.map((f) => {
+					? faq.map((f, i) => {
 							return (
-								<Accordion title={f.question_uz}>
+								<Accordion key={i} title={f.question_uz}>
 									{f.answer_uz}
 								</Accordion>
 							);
 					  })
 					: lang === 'ru'
-					? faq.map((f) => {
+					? faq.map((f, i) => {
 							return (
-								<Accordion title={f.question_ru}>
+								<Accordion key={i} title={f.question_ru}>
 									{f.answer_ru}
 								</Accordion>
 							);
 					  })
 					: lang === 'eng'
-					? faq.map((f) => {
+					? faq.map((f, i) => {
 							return (
-								<Accordion title={f.question_en}>
+								<Accordion key={i} title={f.question_en}>
 									{f.answer_en}
 								</Accordion>
 							);
 					  })
-					: faq.map((f) => {
+					: faq.map((f, i) => {
 							return (
-								<Accordion title={f.question_kg}>
+								<Accordion key={i} title={f.question_kg}>
 									{f.answer_kg}
 								</Accordion>
 							);

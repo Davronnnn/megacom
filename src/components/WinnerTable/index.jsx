@@ -16,7 +16,7 @@ const WinnerTable = ({ text, lang }) => {
 
 	return (
 		<div className='winner-table'>
-			<table class='table table-striped wow fadeIn'>
+			<table className='table table-striped wow fadeIn'>
 				<thead>
 					<tr>
 						<th scope='col'></th>
