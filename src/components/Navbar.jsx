@@ -39,6 +39,7 @@ const Navbar = ({ load, setLoad, text, lang, setLang }) => {
 			alignItems: 'center',
 			cursor: 'pointer',
 			padding: '4px',
+			zIndex: '100',
 		},
 		line: {
 			height: '2px',
