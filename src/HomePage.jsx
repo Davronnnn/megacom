@@ -46,13 +46,7 @@ const HomePage = () => {
 				setLoad={setLoad}
 				setLang={setLang}
 			/>
-			<Main
-				load={load}
-				setLoad={setLang}
-				text={text}
-				setLoad={setLoad}
-				lang={lang}
-			/>
+			<Main load={load} setLoad={setLang} text={text} lang={lang} />
 			<Gift text={text} lang={lang} />
 			<WinnersList text={text} lang={lang} />
 			<Registration text={text} lang={lang} />
