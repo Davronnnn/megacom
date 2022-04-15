@@ -45,7 +45,7 @@ const WinnerTable = ({ text,lang }) => {
 					{ winners.map((winner, index) => 
 						<tr>
 						<th scope='row'></th>
-						<th scope='row'>{index}</th>
+						<th scope='row'>{index+1}</th>
 						<td>{winner.phone_number}</td>
 						<td>{winner.date}</td>
 						<td>{winner.prize}</td>
