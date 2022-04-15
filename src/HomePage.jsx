@@ -1,23 +1,29 @@
 import React, { useEffect, useState } from 'react';
+
+import WOW from 'wowjs';
+import axios from 'axios';
+
 import Gift from './sections/Gifts';
 import Main from './sections/Main';
 import WinnersList from './sections/Winners';
-import './Home.scss';
 import Registration from './sections/Registration';
 import Questions from './sections/Question';
 import Footer from './sections/Footer';
-import WOW from 'wowjs';
-import axios from 'axios';
 import FormSection from './sections/Form';
+
 import Navbar from './components/Navbar';
+import Loader from './components/Loader';
+
+import './Home.scss';
 
 const HomePage = () => {
-	const [load, setLoad] = useState(false);
+	const [load, setLoad] = useState(true);
 	const [text, setText] = useState([]);
 
 	const [lang, setLang] = useState('kz');
 
 	useEffect(() => {
+		setLoad(true);
 		new WOW.WOW({
 			live: false,
 		}).init();
@@ -25,8 +31,8 @@ const HomePage = () => {
 			.get('https://backend.megacom.win/translation/get-words')
 			.then((res) => {
 				setText(res.data);
-			})
-			.catch((err) => {});
+				setLoad(false);
+			});
 	}, []);
 
 	useEffect(() => {
@@ -36,7 +42,7 @@ const HomePage = () => {
 		setLoad(false);
 	}, [load]);
 
-	if (load) return <div></div>;
+	if (load) return <Loader />;
 	return (
 		<div>
 			<Navbar
