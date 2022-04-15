@@ -13,6 +13,13 @@ const Navbar = ({ load, setLoad, text, lang, setLang }) => {
 	}
 	const handleClick = () => {
 		setOpen((e) => !e);
+		var menu = document.getElementById('menu__mobile');
+		if (open){
+			menu.style.left = "110%";
+		}
+		else {
+			menu.style.left = "0%";
+		}
 	};
 
 	const styles = {
@@ -103,9 +110,8 @@ const Navbar = ({ load, setLoad, text, lang, setLang }) => {
 				<div style={{ ...styles.line, ...styles.lineMiddle }} />
 				<div style={{ ...styles.line, ...styles.lineBottom }} />
 			</div>
-			<Menu open={open}>{'asdasd'}</Menu>
 
-			<div className='nav-links'>
+			<div className='nav-links' id="menu__mobile">
 				{lang === 'uz' ? (
 					<>
 						<Link
