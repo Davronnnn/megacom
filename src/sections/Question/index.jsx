@@ -68,7 +68,10 @@ const Questions = ({ text, lang }) => {
 
 				<div className='question-section__link mb mt-5'>
 					<a href='/'>
-						Все вопросы и ответы
+						{lang === 'uz' ? text[44]?.uz_text : ''}
+						{lang === 'ru' ? text[44]?.ru_text : ''}
+						{lang === 'en' ? text[44]?.en_text : ''}
+						{lang === 'kz' ? text[44]?.kg_text : ''}
 						<img src={questionArrow} alt='arrow' />
 					</a>
 				</div>
