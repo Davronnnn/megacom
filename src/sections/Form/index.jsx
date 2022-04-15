@@ -10,7 +10,7 @@ const FormSection = ({ text, lang }) => {
 			? "Jo'natish"
 			: lang === 'ru'
 			? 'Отправить'
-			: lang === 'eng'
+			: lang === 'en'
 			? 'Submit'
 			: 'Жөнөтүү'
 	);
@@ -29,8 +29,8 @@ const FormSection = ({ text, lang }) => {
 					if (lang === 'uz') {
 						setMessage('Muvaffaqqiyatli');
 					} else if (lang === 'ru') {
-						setMessage('Неуспешный');
-					} else if (lang === 'eng') {
+						setMessage('Успешный');
+					} else if (lang === 'en') {
 						setMessage('Successful');
 					} else {
 						setMessage('Ийгиликтүү');
@@ -44,7 +44,7 @@ const FormSection = ({ text, lang }) => {
 						setMessage('Muvaffaqqiyatsiz');
 					} else if (lang === 'ru') {
 						setMessage('Неуспешный');
-					} else if (lang === 'eng') {
+					} else if (lang === 'en') {
 						setMessage('Failed');
 					} else {
 						setMessage('Ийгиликсиз');
@@ -57,7 +57,7 @@ const FormSection = ({ text, lang }) => {
 				setMessage('Muvaffaqqiyatsiz');
 			} else if (lang === 'ru') {
 				setMessage('Неуспешный');
-			} else if (lang === 'eng') {
+			} else if (lang === 'en') {
 				setMessage('Failed');
 			} else {
 				setMessage('Ийгиликсиз');

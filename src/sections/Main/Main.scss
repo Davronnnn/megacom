@@ -165,11 +165,17 @@
 		width: 25vw;
 		padding: 10px;
 		display: flex;
-		button {
+		a {
+			text-decoration: none;
 			background: #58227a;
 			border-radius: 8px;
-			color: #ffffff;
+			color: #ffffff !important;
 			width: 50%;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
 			outline: none;
 			border: none;
 		}

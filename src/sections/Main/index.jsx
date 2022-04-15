@@ -1,8 +1,12 @@
 import React from 'react';
+import { Link } from 'react-scroll';
+
 import Layout from '../../components/Layout';
-import './Main.scss';
+
 import card1 from '../../assets/header-card1.png';
 import star from '../../assets/star.png';
+
+import './Main.scss';
 const Main = ({ load, lang, setLang, setLoad, text }) => {
 	return (
 		<section className='main-section'>
@@ -29,12 +33,17 @@ const Main = ({ load, lang, setLang, setLoad, text }) => {
 						{lang === 'kz' ? text[6]?.kg_text : ''}
 					</p>
 					<div className='main-section__buttons '>
-						<button>
+						<Link
+							to='form'
+							spy={true}
+							smooth={true}
+							offset={50}
+							duration={2000}>
 							{lang === 'uz' ? text[7]?.uz_text : ''}
 							{lang === 'ru' ? text[7]?.ru_text : ''}
 							{lang === 'en' ? text[7]?.en_text : ''}
 							{lang === 'kz' ? text[7]?.kg_text : ''}
-						</button>
+						</Link>
 						<span>
 							<p>
 								{lang === 'uz' ? text[8]?.uz_text : ''}
