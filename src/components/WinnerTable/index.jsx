@@ -1,9 +1,7 @@
 import React from 'react';
 import './style.scss';
 
-const WinnerTable = ({ text }) => {
-	var lang = localStorage.getItem('lang');
-
+const WinnerTable = ({ text,lang }) => {
 	return (
 		<div className='winner-table'>
 			<table class='table table-striped wow fadeIn'>

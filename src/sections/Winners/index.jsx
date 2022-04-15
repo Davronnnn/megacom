@@ -4,8 +4,7 @@ import SectionHeader from '../../components/SectionHeader';
 import WinnerTable from '../../components/WinnerTable';
 import './winner.scss';
 
-const WinnersList = ({ text }) => {
-	var lang = localStorage.getItem('lang');
+const WinnersList = ({ text,lang }) => {
 	let title = '';
 	let subtitle = '';
 	if (lang === 'uz') {
@@ -21,15 +20,15 @@ const WinnersList = ({ text }) => {
 		subtitle = text[22]?.en_text;
 	}
 	if (lang === 'kz') {
-		title = text[21]?.kyr_text;
-		subtitle = text[22]?.kyr_text;
+		title = text[21]?.kg_text;
+		subtitle = text[22]?.kg_text;
 	}
 
 	return (
 		<section className='winner-section winners'>
 			<Layout>
 				<SectionHeader title={title} subtitle={subtitle}>
-					<WinnerTable text={text} />
+					<WinnerTable text={text,lang} />
 				</SectionHeader>
 			</Layout>
 		</section>

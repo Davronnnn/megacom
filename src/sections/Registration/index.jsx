@@ -3,8 +3,7 @@ import QuestionCard from '../../components/QuestionCard/index';
 import SectionHeader from '../../components/SectionHeader';
 import './registration.scss';
 
-const Registration = ({ text }) => {
-	let lang = localStorage.getItem('lang');
+const Registration = ({ text,lang }) => {
 	let title,
 		subtitle,
 		title2,

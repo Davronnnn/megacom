@@ -2,8 +2,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import './footer.scss';
 import arrow from '.././../assets/arrow.png';
-const Footer = ({ text }) => {
-	var lang = localStorage.getItem('lang');
+const Footer = ({ text,lang }) => {
 
 	return (
 		<footer className='footer'>
@@ -17,7 +16,10 @@ const Footer = ({ text }) => {
 					</p>
 					<button>
 						<img src={arrow} alt='arrow' />
-						Скачать
+						{lang === "ru" ? "Скачать" : ""}
+						{lang === "uz" ? "Yuklab olish" : ""}
+						{lang === "en" ? "Download" : ""}
+						{lang === "kz" ? "Жүктөп алуу" : ""}
 					</button>
 				</div>
 				<div className='footer-bottom'>

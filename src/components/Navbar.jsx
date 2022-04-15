@@ -4,15 +4,11 @@ import './Navbar.scss';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 
-const Navbar = ({ load, setLoad, text }) => {
-	const [lang, setLang] = useState(
-		localStorage.getItem('lang') ? localStorage.getItem('lang') : 'uz'
-	);
-	const [open, setOpen] = useState();
+const Navbar = ({ load, setLoad, text, lang, setLang }) => {
+	const [open, setOpen] = useState(false);
 
 	function translation(e) {
 		localStorage.setItem('lang', e.target.value);
-		setLang(e.target.value);
 		setLoad(true);
 	}
 	const handleClick = () => {
@@ -210,7 +206,7 @@ const Navbar = ({ load, setLoad, text }) => {
 							smooth={true}
 							offset={50}
 							duration={2000}>
-							<p>{text[0]?.kyr_text}</p>
+							<p>{text[0]?.kg_text}</p>
 						</Link>
 						<Link
 							to='winners'
@@ -218,7 +214,7 @@ const Navbar = ({ load, setLoad, text }) => {
 							smooth={true}
 							offset={50}
 							duration={2000}>
-							<p>{text[1]?.kyr_text}</p>
+							<p>{text[1]?.kg_text}</p>
 						</Link>
 						<Link
 							to='company'
@@ -226,7 +222,7 @@ const Navbar = ({ load, setLoad, text }) => {
 							smooth={true}
 							offset={50}
 							duration={2000}>
-							<p>{text[2]?.kyr_text}</p>
+							<p>{text[2]?.kg_text}</p>
 						</Link>
 						<Link
 							to='question'
@@ -234,7 +230,7 @@ const Navbar = ({ load, setLoad, text }) => {
 							smooth={true}
 							offset={50}
 							duration={2000}>
-							<p>{text[3]?.kyr_text}</p>
+							<p>{text[3]?.kg_text}</p>
 						</Link>
 						<Link
 							to='footer'
@@ -242,7 +238,7 @@ const Navbar = ({ load, setLoad, text }) => {
 							smooth={true}
 							offset={50}
 							duration={2000}>
-							<p>{text[4]?.kyr_text}</p>
+							<p>{text[4]?.kg_text}</p>
 						</Link>
 					</>
 				) : (
