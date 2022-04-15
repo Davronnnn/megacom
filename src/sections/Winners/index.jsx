@@ -20,8 +20,8 @@ const WinnersList = ({ text,lang }) => {
 		subtitle = text[22]?.en_text;
 	}
 	if (lang === 'kz') {
-		title = text[21]?.kyr_text;
-		subtitle = text[22]?.kyr_text;
+		title = text[21]?.kg_text;
+		subtitle = text[22]?.kg_text;
 	}
 
 	return (

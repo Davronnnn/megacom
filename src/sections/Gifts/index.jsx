@@ -58,16 +58,16 @@ const Gift = ({ text,lang }) => {
 		participate = 'Participate';
 	}
 	if (lang === 'kz') {
-		title = text[9]?.kyr_text;
-		card_title1 = text[10]?.kyr_text;
-		card_title2 = text[11]?.kyr_text;
-		card_title3 = text[12]?.kyr_text;
-		price1 = text[13]?.kyr_text;
-		price2 = text[14]?.kyr_text;
-		price3 = text[15]?.kyr_text;
-		text1 = text[16]?.kyr_text;
-		text2 = text[17]?.kyr_text;
-		text3 = text[18]?.kyr_text;
+		title = text[9]?.kg_text;
+		card_title1 = text[10]?.kg_text;
+		card_title2 = text[11]?.kg_text;
+		card_title3 = text[12]?.kg_text;
+		price1 = text[13]?.kg_text;
+		price2 = text[14]?.kg_text;
+		price3 = text[15]?.kg_text;
+		text1 = text[16]?.kg_text;
+		text2 = text[17]?.kg_text;
+		text3 = text[18]?.kg_text;
 		participate = 'Kатышуу';
 	}
 
@@ -98,13 +98,13 @@ const Gift = ({ text,lang }) => {
 							{lang === 'uz' ? text[19]?.uz_text : ''}
 							{lang === 'ru' ? text[19]?.ru_text : ''}
 							{lang === 'en' ? text[19]?.en_text : ''}
-							{lang === 'kz' ? text[19]?.kyr_text : ''}
+							{lang === 'kz' ? text[19]?.kg_text : ''}
 						</h1>
 						<p>
 							{lang === 'uz' ? text[20]?.uz_text : ''}
 							{lang === 'ru' ? text[20]?.ru_text : ''}
 							{lang === 'en' ? text[20]?.en_text : ''}
-							{lang === 'kz' ? text[20]?.kyr_text : ''}
+							{lang === 'kz' ? text[20]?.kg_text : ''}
 						</p>
 					</div>
 					<div className='coin-image'>
