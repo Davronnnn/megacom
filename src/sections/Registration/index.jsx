@@ -3,7 +3,7 @@ import QuestionCard from '../../components/QuestionCard/index';
 import SectionHeader from '../../components/SectionHeader';
 import './registration.scss';
 
-const Registration = ({ text,lang }) => {
+const Registration = ({ text, lang }) => {
 	let title,
 		subtitle,
 		title2,
@@ -73,7 +73,7 @@ const Registration = ({ text,lang }) => {
 						<path
 							d='M35.0607 13.0607C35.6464 12.4749 35.6464 11.5251 35.0607 10.9393L25.5147 1.3934C24.9289 0.807611 23.9792 0.807611 23.3934 1.3934C22.8076 1.97919 22.8076 2.92893 23.3934 3.51472L31.8787 12L23.3934 20.4853C22.8076 21.0711 22.8076 22.0208 23.3934 22.6066C23.9792 23.1924 24.9289 23.1924 25.5147 22.6066L35.0607 13.0607ZM0 13.5H34V10.5H0V13.5Z'
 							fill='#2D1D3F'
-							fill-opacity='0.4'
+							fillOpacity='0.4'
 						/>
 					</svg>
 
@@ -92,7 +92,7 @@ const Registration = ({ text,lang }) => {
 						<path
 							d='M35.0607 13.0607C35.6464 12.4749 35.6464 11.5251 35.0607 10.9393L25.5147 1.3934C24.9289 0.807611 23.9792 0.807611 23.3934 1.3934C22.8076 1.97919 22.8076 2.92893 23.3934 3.51472L31.8787 12L23.3934 20.4853C22.8076 21.0711 22.8076 22.0208 23.3934 22.6066C23.9792 23.1924 24.9289 23.1924 25.5147 22.6066L35.0607 13.0607ZM0 13.5H34V10.5H0V13.5Z'
 							fill='#2D1D3F'
-							fill-opacity='0.4'
+							fillOpacity='0.4'
 						/>
 					</svg>
 

@@ -1,22 +1,22 @@
 import axios from 'axios';
-import React, {useEffect,useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.scss';
 
-const WinnerTable = ({ text,lang }) => {
-
-	const [winners, setWinnsers] = useState([])
+const WinnerTable = ({ text, lang }) => {
+	const [winners, setWinnsers] = useState([]);
 
 	useEffect(() => {
-		axios.get("https://backend.megacom.win/translation/get-winners")
+		axios
+			.get('https://backend.megacom.win/translation/get-winners')
 
-		.then(res => {
-			setWinnsers(res.data)
-		})
-	} , [])
+			.then((res) => {
+				setWinnsers(res.data);
+			});
+	}, []);
 
 	return (
 		<div className='winner-table'>
-			<table class='table table-striped wow fadeIn'>
+			<table className='table table-striped wow fadeIn'>
 				<thead>
 					<tr>
 						<th scope='col'></th>
@@ -42,17 +42,15 @@ const WinnerTable = ({ text,lang }) => {
 					</tr>
 				</thead>
 				<tbody>
-					{ winners.map((winner, index) => 
-						<tr>
-						<th scope='row'></th>
-						<th scope='row'>{index+1}</th>
-						<td>{winner.phone_number}</td>
-						<td>{winner.date}</td>
-						<td>{winner.prize}</td>
-					</tr>
-					 )}
-					
-					
+					{winners.map((winner, index) => (
+						<tr key={index}>
+							<th scope='row'></th>
+							<th scope='row'>{index + 1}</th>
+							<td>{winner.phone_number}</td>
+							<td>{winner.date}</td>
+							<td>{winner.prize}</td>
+						</tr>
+					))}
 				</tbody>
 			</table>
 		</div>

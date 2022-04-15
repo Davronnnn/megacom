@@ -5,9 +5,9 @@
 	min-height: 120vh;
 	background-image: url('../../assets/mainbg.png');
 	background-size: cover;
-	// background-position: top;
 	background-repeat: no-repeat;
-
+	padding-top: 45px;
+	z-index: 2;
 	.header-card1 {
 		padding: 10px 20px;
 		display: flex;
@@ -15,7 +15,7 @@
 		text-align: center;
 		position: absolute;
 		right: 0%;
-		top: 20%;
+		top: -50%;
 
 		background: #ffffff;
 		box-shadow: 0px 140px 112px rgba(0, 0, 0, 0.07),
@@ -56,12 +56,12 @@
 			font-weight: 700;
 		}
 	}
-		
+
 	.header-card2 {
 		text-align: center;
 		position: absolute;
 		left: 40%;
-		bottom: -20%;
+		bottom: -100%;
 
 		display: flex;
 		flex-direction: column;
@@ -197,7 +197,7 @@
 	.main-section {
 		#card1 {
 			position: absolute;
-			top: 20%;
+			top: 0%;
 			right: -5%;
 		}
 		#card2 {
@@ -253,7 +253,7 @@
 
 			position: absolute;
 			right: 5%;
-			top: 20%;
+			top: -30%;
 
 			padding: 10px;
 
@@ -274,7 +274,7 @@
 		}
 		#card2 {
 			position: absolute;
-			bottom: -60%;
+			bottom: -80%;
 			right: 30%;
 			width: 500px;
 		}
@@ -314,6 +314,59 @@
 
 				width: 80%;
 			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.main-section {
+		&__title {
+			width: 100%;
+			margin: 15vh 5vw;
+			h1 {
+				text-align: center;
+			}
+			p {
+				width: 100%;
+				text-align: center;
+			}
+		}
+		&__buttons {
+			width: 50%;
+		}
+
+		.header-card1 {
+			top: 50%;
+		}
+	}
+}
+@media screen and (max-width: 560px) {
+	.main-section {
+		min-height: 100vh;
+		&__title {
+			width: 100%;
+			margin: 10vh 5vw;
+			margin-bottom: 2vh;
+			h1 {
+				text-align: center;
+			}
+			p {
+				width: 100%;
+				text-align: center;
+			}
+		}
+		&__buttons {
+			width: 100%;
+		}
+
+		.header-card1,
+		.header-card2 {
+			position: relative;
+			top: 100%;
+			left: 0;
+			margin: 0 auto;
+		}
+		.header-card1 {
+			margin-bottom: 30px;
 		}
 	}
 }

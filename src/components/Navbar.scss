@@ -1,28 +1,32 @@
 nav {
-    .mobile-icon {
-        display: none;
-    }
-    #lang {
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        background: transparent;
-        border: none;
-        color: #111827;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	display: flex;
+	z-index: 100;
+	// justify-content: center;
+	align-items: center;
+	padding: 40px 5vw;
+	.mobile-icon {
+		display: none;
+	}
+	#lang {
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		background: transparent;
+		border: none;
+		color: #111827;
 
         &:focus {
             outline: none;
         }
     }
 
-    padding-top: 5vh;
-    display: flex;
-    // justify-content: center;
-    align-items: center;
-    .nav-links {
-        display: flex;
-        margin: 0 5vw;
+	.nav-links {
+		display: flex;
+		margin: 0 5vw;
 
         p {
             cursor: pointer;
@@ -99,4 +103,8 @@ nav {
 			}
         }
     }
+}
+.small-nav {
+	padding: 20px 5vw;
+	background-color: rgba($color: #ded7f6, $alpha: 0.7);
 }
