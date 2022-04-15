@@ -23,11 +23,10 @@ const Navbar = ({ load, setLoad, text, lang, setLang }) => {
 	const handleClick = () => {
 		setOpen((e) => !e);
 		var menu = document.getElementById('menu__mobile');
-		if (open){
-			menu.style.left = "110%";
-		}
-		else {
-			menu.style.left = "0%";
+		if (open) {
+			menu.style.left = '110%';
+		} else {
+			menu.style.left = '0%';
 		}
 	};
 
@@ -63,51 +62,6 @@ const Navbar = ({ load, setLoad, text, lang, setLang }) => {
 		},
 	};
 
-	/* Menu.jsx */
-	class Menu extends React.Component {
-		constructor(props) {
-			super(props);
-			this.state = {
-				open: this.props.open ? this.props.open : false,
-			};
-		}
-
-		componentWillReceiveProps(nextProps) {
-			if (nextProps.open !== this.state.open) {
-				this.setState({ open: nextProps.open });
-			}
-		}
-
-		render() {
-			const styles = {
-				container: {
-					position: 'absolute',
-					top: 0,
-					left: 0,
-					height: this.state.open ? '100%' : 0,
-					width: '100vw',
-					display: 'flex',
-					flexDirection: 'column',
-					background: 'black',
-					opacity: 0.95,
-					color: '#fafafa',
-					transition: 'height 0.3s ease',
-					zIndex: 2,
-				},
-				menuList: {
-					paddingTop: '3rem',
-				},
-			};
-			return (
-				<div style={styles.container}>
-					{this.state.open ? (
-						<div style={styles.menuList}>{this.props.children}</div>
-					) : null}
-				</div>
-			);
-		}
-	}
-
 	return (
 		<nav className={`header ${small ? 'small-nav' : ''}`}>
 			<a target='_blank' rel='noreferrer' href='http://megacom.kg'>
@@ -122,7 +76,7 @@ const Navbar = ({ load, setLoad, text, lang, setLang }) => {
 				<div style={{ ...styles.line, ...styles.lineBottom }} />
 			</div>
 
-			<div className='nav-links' id="menu__mobile">
+			<div className='nav-links' id='menu__mobile'>
 				{lang === 'uz' ? (
 					<>
 						<Link
