@@ -19,73 +19,90 @@ nav {
 		border: none;
 		color: #111827;
 
-		&:focus {
-			outline: none;
-		}
-	}
+        &:focus {
+            outline: none;
+        }
+    }
 
 	.nav-links {
 		display: flex;
 		margin: 0 5vw;
 
-		p {
-			cursor: pointer;
-			font-family: 'Roboto';
-			font-style: normal;
-			font-weight: 600;
-			font-size: 16px;
-			/* identical to box height, or 100% */
+        p {
+            cursor: pointer;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            /* identical to box height, or 100% */
 
-			font-feature-settings: 'liga' off;
+            font-feature-settings: "liga" off;
 
-			/* Neutral/900 */
+            /* Neutral/900 */
 
-			color: #111827;
+            color: #111827;
 
-			/* Inside auto layout */
+            /* Inside auto layout */
 
-			flex: none;
-			order: 0;
-			flex-grow: 0;
-			margin: 0px 4px;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 4px;
 
-			margin: 0 20px;
-		}
-	}
+            margin: 0 20px;
+        }
+    }
 }
 @media (min-width: 1920px) {
-	nav {
-		.nav-links {
-			p,
-			select {
-				font-size: 20px;
-			}
-		}
-	}
+    nav {
+        .nav-links {
+            p,
+            select {
+                font-size: 20px;
+            }
+        }
+    }
 }
 @media (max-width: 1024px) {
-	nav {
-		.nav-links {
-			p,
-			select,
-			#lang {
-				margin: 0 10px;
-				font-size: 10px;
-				text-align: center;
-			}
-		}
-	}
+    nav {
+        .nav-links {
+            p,
+            select,
+            #lang {
+                margin: 0 10px;
+                font-size: 10px;
+                text-align: center;
+            }
+        }
+    }
 }
 @media (max-width: 768px) {
-	.mobile-icon {
-		display: flex !important;
-	}
-	nav {
-		justify-content: space-between;
-		.nav-links {
-			display: none;
-		}
-	}
+    .mobile-icon {
+        display: flex !important;
+    }
+    nav {
+        justify-content: space-between;
+        .nav-links {
+			position: absolute;
+            display: flex;
+            flex-direction: column;
+			top: 15%;
+			background: #FFF;
+			z-index: 2;
+			width: 100%;
+			left: 110%;
+			margin: 0;
+			transition: all 0.5s ease-in-out;
+            a {
+				width: 100%;
+				padding: 10px 0;
+
+            }
+			select {
+				padding: 10px 0;
+			}
+        }
+    }
 }
 .small-nav {
 	padding: 20px 5vw;
