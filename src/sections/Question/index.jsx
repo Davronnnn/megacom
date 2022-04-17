@@ -28,21 +28,22 @@ const Questions = ({ text, lang }) => {
 			.then((res) => {
 				setFaq(res.data.slice(0, 5));
 				setData(res.data);
-			})
-			.catch((err) => {
-				console.log(err);
 			});
 	}, []);
 
+	console.log('isSmall', isSmall);
 	const fullData = () => {
+		setIsSmall((prev) => !prev);
+	};
+
+	useEffect(() => {
 		if (isSmall) {
 			setFaq(data.slice(0, 5));
-			setIsSmall((prev) => !prev);
 		} else {
 			setFaq(data);
-			setIsSmall((prev) => !prev);
 		}
-	};
+	}, [isSmall, data]);
+
 	return (
 		<section className='question-section question'>
 			<SectionHeader title={sec_title}>
@@ -95,7 +96,11 @@ const Questions = ({ text, lang }) => {
 							{lang === 'ru' ? text[46]?.ru_text : ''}
 							{lang === 'en' ? text[46]?.en_text : ''}
 							{lang === 'kz' ? text[46]?.kg_text : ''}
-							<img src={questionArrow} id='less-img' alt='arrow' />
+							<img
+								src={questionArrow}
+								id='less-img'
+								alt='arrow'
+							/>
 						</div>
 					)}
 				</div>

@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.ebd414b7.css",
-    "main.js": "/static/js/main.c9c59d4e.js",
+    "main.js": "/static/js/main.f5015ebe.js",
     "static/media/mainbg.png": "/static/media/mainbg.ec5f60ef73db4c615d61.png",
     "static/media/message-coins.png": "/static/media/message-coins.5673617e2c942b5eb169.png",
     "index.html": "/index.html",
     "main.ebd414b7.css.map": "/static/css/main.ebd414b7.css.map",
-    "main.c9c59d4e.js.map": "/static/js/main.c9c59d4e.js.map"
+    "main.f5015ebe.js.map": "/static/js/main.f5015ebe.js.map"
   },
   "entrypoints": [
     "static/css/main.ebd414b7.css",
-    "static/js/main.c9c59d4e.js"
+    "static/js/main.f5015ebe.js"
   ]
 }
