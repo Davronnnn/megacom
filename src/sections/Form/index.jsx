@@ -70,10 +70,10 @@ const FormSection = ({ text, lang }) => {
 				<div className='message flex mtb'>
 					<div className='coin-title '>
 						<h1 className='wow fadeIn'>
-							{lang === 'uz' ? text[19]?.uz_text : ''}
-							{lang === 'ru' ? text[19]?.ru_text : ''}
-							{lang === 'en' ? text[19]?.en_text : ''}
-							{lang === 'kz' ? text[19]?.kg_text : ''}
+							{lang === 'uz' ? text[45]?.uz_text : ''}
+							{lang === 'ru' ? text[45]?.ru_text : ''}
+							{lang === 'en' ? text[45]?.en_text : ''}
+							{lang === 'kz' ? text[45]?.kg_text : ''}
 						</h1>
 						<div className='submits'>
 							<input
