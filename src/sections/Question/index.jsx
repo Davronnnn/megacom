@@ -27,7 +27,6 @@ const Questions = ({ text, lang }) => {
 			.then((res) => {
 				setFaq(res.data.slice(0, 5));
 				setData(res.data);
-				console.log(res.data);
 			})
 			.catch((err) => {
 				console.log(err);

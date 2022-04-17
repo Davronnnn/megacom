@@ -1,6 +1,9 @@
 import React from 'react';
 import classnames from 'classnames';
 import { usePagination } from '../hooks/usePagination';
+
+import './Pagination.scss'
+
 const Pagination = (props) => {
 	const {
 		onPageChange,
@@ -45,7 +48,7 @@ const Pagination = (props) => {
 				onClick={onPrevious}>
 				<div className='arrow left' />
 			</li>
-			{paginationRange.map((pageNumber) => {
+			{paginationRange.map((pageNumber, i) => {
 				// If the pageItem is a DOT, render the DOTS unicode character
 				// if (pageNumber === DOTS) {
 				// 	return <li className='pagination-item dots'>&#8230;</li>;
@@ -54,6 +57,7 @@ const Pagination = (props) => {
 				// Render our Page Pills
 				return (
 					<li
+						key={i}
 						className={classnames('pagination-item', {
 							selected: pageNumber === currentPage,
 						})}
