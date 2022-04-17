@@ -6,6 +6,7 @@ import questionArrow from '../../assets/questionarrow.png';
 import axios from 'axios';
 const Questions = ({ text, lang }) => {
 	const [faq, setFaq] = useState([]);
+	const [data, setData] = useState([]);
 	let sec_title;
 
 	if (lang === 'uz') {
@@ -24,13 +25,18 @@ const Questions = ({ text, lang }) => {
 		axios
 			.get('https://backend.megacom.win/translation/get-faqs')
 			.then((res) => {
-				setFaq(res.data);
+				setFaq(res.data.slice(0, 5));
+				setData(res.data);
+				console.log(res.data);
 			})
 			.catch((err) => {
 				console.log(err);
 			});
 	}, []);
 
+	const fullData = () => {
+		setFaq(data);
+	};
 	return (
 		<section className='question-section question'>
 			<SectionHeader title={sec_title}>
@@ -66,14 +72,16 @@ const Questions = ({ text, lang }) => {
 							);
 					  })}
 
-				<div className='question-section__link mb mt-5'>
-					<a href='/'>
+				<div
+					onClick={fullData}
+					className='question-section__link mb mt-5'>
+					<div href='/'>
 						{lang === 'uz' ? text[44]?.uz_text : ''}
 						{lang === 'ru' ? text[44]?.ru_text : ''}
 						{lang === 'en' ? text[44]?.en_text : ''}
 						{lang === 'kz' ? text[44]?.kg_text : ''}
 						<img src={questionArrow} alt='arrow' />
-					</a>
+					</div>
 				</div>
 			</SectionHeader>
 		</section>

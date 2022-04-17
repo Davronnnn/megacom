@@ -20,7 +20,7 @@ const HomePage = () => {
 	const [load, setLoad] = useState(true);
 	const [text, setText] = useState([]);
 
-	const [lang, setLang] = useState('kz');
+	const [lang, setLang] = useState('ru');
 
 	useEffect(() => {
 		setLoad(true);

@@ -6,7 +6,7 @@
 		margin-bottom: 60px;
 	}
 	&__link {
-		a {
+		div {
 			font-family: 'Roboto';
 			font-style: normal;
 			font-weight: 400;
@@ -14,6 +14,8 @@
 			line-height: 28px;
 			text-decoration: none;
 			/* identical to box height, or 82% */
+
+			cursor: pointer;
 
 			color: #20bf6b;
 			img {
