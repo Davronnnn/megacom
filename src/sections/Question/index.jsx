@@ -7,6 +7,7 @@ import axios from 'axios';
 const Questions = ({ text, lang }) => {
 	const [faq, setFaq] = useState([]);
 	const [data, setData] = useState([]);
+	const [isSmall, setIsSmall] = useState(true);
 	let sec_title;
 
 	if (lang === 'uz') {
@@ -34,9 +35,13 @@ const Questions = ({ text, lang }) => {
 	}, []);
 
 	const fullData = () => {
-		setFaq(data);
-		const link = document.querySelector('.question-section__link');
-		link.style.display = 'none';
+		if (isSmall) {
+			setFaq(data.slice(0, 5));
+			setIsSmall((prev) => !prev);
+		} else {
+			setFaq(data);
+			setIsSmall((prev) => !prev);
+		}
 	};
 	return (
 		<section className='question-section question'>
@@ -76,13 +81,23 @@ const Questions = ({ text, lang }) => {
 				<div
 					onClick={fullData}
 					className='question-section__link mb mt-5'>
-					<div>
-						{lang === 'uz' ? text[44]?.uz_text : ''}
-						{lang === 'ru' ? text[44]?.ru_text : ''}
-						{lang === 'en' ? text[44]?.en_text : ''}
-						{lang === 'kz' ? text[44]?.kg_text : ''}
-						<img src={questionArrow} alt='arrow' />
-					</div>
+					{isSmall ? (
+						<div>
+							{lang === 'uz' ? text[44]?.uz_text : ''}
+							{lang === 'ru' ? text[44]?.ru_text : ''}
+							{lang === 'en' ? text[44]?.en_text : ''}
+							{lang === 'kz' ? text[44]?.kg_text : ''}
+							<img src={questionArrow} alt='arrow' />
+						</div>
+					) : (
+						<div>
+							{lang === 'uz' ? text[46]?.uz_text : ''}
+							{lang === 'ru' ? text[46]?.ru_text : ''}
+							{lang === 'en' ? text[46]?.en_text : ''}
+							{lang === 'kz' ? text[46]?.kg_text : ''}
+							<img src={questionArrow} id='less-img' alt='arrow' />
+						</div>
+					)}
 				</div>
 			</SectionHeader>
 		</section>
