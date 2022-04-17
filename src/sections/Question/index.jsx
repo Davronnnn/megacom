@@ -50,7 +50,7 @@ const Questions = ({ text, lang }) => {
 								</Accordion>
 							);
 					  })
-					: lang === 'eng'
+					: lang === 'en'
 					? faq.map((f, i) => {
 							return (
 								<Accordion key={i} title={f.question_en}>
