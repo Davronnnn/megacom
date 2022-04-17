@@ -36,6 +36,8 @@ const Questions = ({ text, lang }) => {
 
 	const fullData = () => {
 		setFaq(data);
+		const link = document.querySelector('.question-section__link');
+		link.style.display = 'none';
 	};
 	return (
 		<section className='question-section question'>
@@ -75,7 +77,7 @@ const Questions = ({ text, lang }) => {
 				<div
 					onClick={fullData}
 					className='question-section__link mb mt-5'>
-					<div href='/'>
+					<div>
 						{lang === 'uz' ? text[44]?.uz_text : ''}
 						{lang === 'ru' ? text[44]?.ru_text : ''}
 						{lang === 'en' ? text[44]?.en_text : ''}
