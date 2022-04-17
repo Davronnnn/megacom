@@ -1,6 +1,8 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import './style.scss';
+import Pagination from '../Pagination';
+let PageSize = 7;
 
 const WinnerTable = ({ text, lang }) => {
 	const [winners, setWinnsers] = useState([]);
@@ -13,6 +15,14 @@ const WinnerTable = ({ text, lang }) => {
 				setWinnsers(res.data);
 			});
 	}, []);
+
+	const [currentPage, setCurrentPage] = useState(1);
+
+	const currentTableData = useMemo(() => {
+		const firstPageIndex = (currentPage - 1) * PageSize;
+		const lastPageIndex = firstPageIndex + PageSize;
+		return winners.slice(firstPageIndex, lastPageIndex);
+	}, [currentPage, winners]);
 
 	return (
 		<div className='winner-table'>
@@ -42,7 +52,16 @@ const WinnerTable = ({ text, lang }) => {
 					</tr>
 				</thead>
 				<tbody>
-					{winners.map((winner, index) => (
+					{/* {winners.map((winner, index) => (
+						<tr key={index}>
+							<th scope='row'></th>
+							<th scope='row'>{index + 1}</th>
+							<td>{winner.date}</td>
+							<td>{winner.phone_number}</td>
+							<td>{winner.prize}</td>
+						</tr>
+					))} */}
+					{currentTableData.map((winner, index) => (
 						<tr key={index}>
 							<th scope='row'></th>
 							<th scope='row'>{index + 1}</th>
@@ -53,6 +72,13 @@ const WinnerTable = ({ text, lang }) => {
 					))}
 				</tbody>
 			</table>
+			<Pagination
+				className='pagination-bar'
+				currentPage={currentPage}
+				totalCount={winners.length}
+				pageSize={PageSize}
+				onPageChange={(page) => setCurrentPage(page)}
+			/>
 		</div>
 	);
 };
