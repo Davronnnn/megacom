@@ -1,8 +1,9 @@
-import React from 'react';
-import logo from '../assets/logo.png';
-import './Navbar.scss';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
+
+import logo from '../../assets/logo.png';
+
+import './Navbar.scss';
 
 const Navbar = ({ load, setLoad, text, lang, setLang }) => {
 	const [open, setOpen] = useState(false);

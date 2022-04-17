@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState, useMemo } from 'react';
 import './style.scss';
 import Pagination from '../Pagination';
-let PageSize = 3;
+let PageSize = 7;
 
 const WinnerTable = ({ text, lang }) => {
 	const [winners, setWinnsers] = useState([]);
