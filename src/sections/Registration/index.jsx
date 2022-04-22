@@ -18,8 +18,8 @@ const Registration = ({ text, lang }) => {
 		subtitle = text[27]?.uz_text;
 		title2 = text[28]?.uz_text;
 		subtitle2 = text[29]?.uz_text;
-		title3 = text[32]?.uz_text;
-		subtitle3 = text[33]?.uz_text;
+		title3 = text[30]?.uz_text;
+		subtitle3 = text[31]?.uz_text;
 		title4 = text[32]?.uz_text;
 		subtitle4 = text[33]?.uz_text;
 	}

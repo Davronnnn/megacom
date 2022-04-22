@@ -31,7 +31,6 @@ const Questions = ({ text, lang }) => {
 			});
 	}, []);
 
-	console.log('isSmall', isSmall);
 	const fullData = () => {
 		setIsSmall((prev) => !prev);
 	};
