@@ -29,7 +29,6 @@ const FormSection = ({ text, lang }) => {
 	const formHandler = () => {
 		let time = localStorage.getItem('time');
 		let currentTime = new Date().getMinutes();
-		console.log(time, currentTime);
 
 		if (phone.length == 12) {
 			if (currentTime - time <= 1) {
