@@ -18,7 +18,11 @@ const FormSection = ({ text, lang }) => {
 	const [isError, setIsError] = useState(false);
 
 	const formHandler = () => {
-		if (phone.length == 12) {
+		let time = localStorage.getItem('time');
+		let currentTime = new Date().getMinutes();
+		if (currentTime - time >= 5) {
+			console.log('working');
+			localStorage.setItem('time', currentTime);
 			axios
 				.post(
 					`https://megacom.cdialogues.com/api/v1.0/X_VICTORINA/NOTIFY?MSISDN=${phone}&LOGIN=VALADDSERV&PASSWORD=Qa5BA3jA`
@@ -36,6 +40,41 @@ const FormSection = ({ text, lang }) => {
 						setMessage('Ийгиликтүү');
 					}
 					setPhone('');
+					localStorage.setItem('time', new Date().getMinutes());
+				})
+				.catch((err) => {
+					console.log(err);
+					setIsError(true);
+					if (lang === 'uz') {
+						setMessage('Muvaffaqqiyatsiz');
+					} else if (lang === 'ru') {
+						setMessage('Неуспешный');
+					} else if (lang === 'en') {
+						setMessage('Failed');
+					} else {
+						setMessage('Ийгиликсиз');
+					}
+				});
+		}
+		if (phone.length == 12 && !time) {
+			axios
+				.post(
+					`https://megacom.cdialogues.com/api/v1.0/X_VICTORINA/NOTIFY?MSISDN=${phone}&LOGIN=VALADDSERV&PASSWORD=Qa5BA3jA`
+				)
+				.then((res) => {
+					setIsSuccess(true);
+					setIsError(false);
+					if (lang === 'uz') {
+						setMessage('Muvaffaqqiyatli');
+					} else if (lang === 'ru') {
+						setMessage('Успешный');
+					} else if (lang === 'en') {
+						setMessage('Successful');
+					} else {
+						setMessage('Ийгиликтүү');
+					}
+					setPhone('');
+					localStorage.setItem('time', new Date().getMinutes());
 				})
 				.catch((err) => {
 					console.log(err);

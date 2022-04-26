@@ -27,6 +27,7 @@ const HomePage = () => {
 		new WOW.WOW({
 			live: false,
 		}).init();
+
 		axios
 			.get('https://backend.megacom.win/translation/get-words')
 			.then((res) => {
