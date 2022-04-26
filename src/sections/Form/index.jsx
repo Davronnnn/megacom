@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './form.scss';
 import messageImg from '../../assets/message-coins.png';
 import axios from 'axios';
@@ -14,81 +14,75 @@ const FormSection = ({ text, lang }) => {
 			? 'Submit'
 			: 'Жөнөтүү'
 	);
+
 	const [isSuccess, setIsSuccess] = useState(false);
 	const [isError, setIsError] = useState(false);
+
+	useEffect(() => {
+		let time = localStorage.getItem('time');
+		let currentTime = new Date().getMinutes();
+		if (currentTime - time >= 5) {
+			localStorage.removeItem('time');
+		}
+	}, []);
 
 	const formHandler = () => {
 		let time = localStorage.getItem('time');
 		let currentTime = new Date().getMinutes();
-		if (currentTime - time >= 5) {
-			console.log('working');
-			localStorage.setItem('time', currentTime);
-			axios
-				.post(
-					`https://megacom.cdialogues.com/api/v1.0/X_VICTORINA/NOTIFY?MSISDN=${phone}&LOGIN=VALADDSERV&PASSWORD=Qa5BA3jA`
-				)
-				.then((res) => {
-					setIsSuccess(true);
-					setIsError(false);
-					if (lang === 'uz') {
-						setMessage('Muvaffaqqiyatli');
-					} else if (lang === 'ru') {
-						setMessage('Успешный');
-					} else if (lang === 'en') {
-						setMessage('Successful');
-					} else {
-						setMessage('Ийгиликтүү');
-					}
-					setPhone('');
-					localStorage.setItem('time', new Date().getMinutes());
-				})
-				.catch((err) => {
-					console.log(err);
-					setIsError(true);
-					if (lang === 'uz') {
-						setMessage('Muvaffaqqiyatsiz');
-					} else if (lang === 'ru') {
-						setMessage('Неуспешный');
-					} else if (lang === 'en') {
-						setMessage('Failed');
-					} else {
-						setMessage('Ийгиликсиз');
-					}
-				});
-		}
-		if (phone.length == 12 && !time) {
-			axios
-				.post(
-					`https://megacom.cdialogues.com/api/v1.0/X_VICTORINA/NOTIFY?MSISDN=${phone}&LOGIN=VALADDSERV&PASSWORD=Qa5BA3jA`
-				)
-				.then((res) => {
-					setIsSuccess(true);
-					setIsError(false);
-					if (lang === 'uz') {
-						setMessage('Muvaffaqqiyatli');
-					} else if (lang === 'ru') {
-						setMessage('Успешный');
-					} else if (lang === 'en') {
-						setMessage('Successful');
-					} else {
-						setMessage('Ийгиликтүү');
-					}
-					setPhone('');
-					localStorage.setItem('time', new Date().getMinutes());
-				})
-				.catch((err) => {
-					console.log(err);
-					setIsError(true);
-					if (lang === 'uz') {
-						setMessage('Muvaffaqqiyatsiz');
-					} else if (lang === 'ru') {
-						setMessage('Неуспешный');
-					} else if (lang === 'en') {
-						setMessage('Failed');
-					} else {
-						setMessage('Ийгиликсиз');
-					}
-				});
+		console.log(time, currentTime);
+
+		if (phone.length == 12) {
+			if (currentTime - time <= 1) {
+				localStorage.removeItem('time');
+
+				setIsSuccess(true);
+				setIsError(false);
+				if (lang === 'uz') {
+					setMessage("Ro'yhatdan o'tilgan");
+				} else if (lang === 'ru') {
+					setMessage('Зарегистрировано');
+				} else if (lang === 'en') {
+					setMessage('Registered');
+				} else {
+					setMessage('Катталган');
+				}
+				setPhone('');
+				localStorage.setItem('time', new Date().getMinutes());
+			}
+			if (!time) {
+				localStorage.setItem('time', currentTime);
+				axios
+					.post(
+						`https://megacom.cdialogues.com/api/v1.0/X_VICTORINA/NOTIFY?MSISDN=${phone}&LOGIN=VALADDSERV&PASSWORD=Qa5BA3jA`
+					)
+					.then((res) => {
+						setIsSuccess(true);
+						setIsError(false);
+						if (lang === 'uz') {
+							setMessage('Muvaffaqqiyatli');
+						} else if (lang === 'ru') {
+							setMessage('Успешный');
+						} else if (lang === 'en') {
+							setMessage('Successful');
+						} else {
+							setMessage('Ийгиликтүү');
+						}
+						setPhone('');
+						localStorage.setItem('time', new Date().getMinutes());
+					})
+					.catch((err) => {
+						setIsError(true);
+						if (lang === 'uz') {
+							setMessage('Muvaffaqqiyatsiz');
+						} else if (lang === 'ru') {
+							setMessage('Неуспешный');
+						} else if (lang === 'en') {
+							setMessage('Failed');
+						} else {
+							setMessage('Ийгиликсиз');
+						}
+					});
+			}
 		} else {
 			setIsSuccess(false);
 			setIsError(true);
