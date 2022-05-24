@@ -111,7 +111,7 @@
 	.form-section {
 		.message {
 			.coin-image {
-				display: none;
+				// display: none;
 			}
 		}
 	}
@@ -129,6 +129,18 @@
 						width: 100%;
 						margin: 10px 0;
 					}
+				}
+			}
+			.application {
+				margin-top: 30px;
+				.application-button {
+					width: 100%;
+					margin-bottom: 20px;
+				}
+				.icons {
+					display: flex;
+					align-items: center;
+					justify-content: space-around;
 				}
 			}
 		}
