@@ -21,16 +21,27 @@ const FormSection = ({ text, lang }) => {
 	const [isSuccess, setIsSuccess] = useState(false);
 	const [isError, setIsError] = useState(false);
 
-	let appText, appStoreLink, playMarketLink;
+	let appText;
+	let appStoreLink;
+	let playMarketLink;
+
 	console.log(text[48].name, text[47].name);
 	if (lang == 'uz') {
 		appText = text[48]?.uz_text ? text[48]?.uz_text : 'App';
+		appStoreLink = text[48]?.name;
+		playMarketLink = text[47]?.name;
 	} else if (lang == 'ru') {
 		appText = text[48]?.ru_text ? text[48]?.ru_text : 'Приложение';
+		appStoreLink = text[48]?.name;
+		playMarketLink = text[47]?.name;
 	} else if (lang == 'en') {
 		appText = text[48]?.en_text ? text[48]?.en_text : 'App';
+		appStoreLink = text[48]?.name;
+		playMarketLink = text[47]?.name;
 	} else {
 		appText = text[48]?.kg_text ? text[48]?.kg_text : 'App';
+		appStoreLink = text[48]?.name;
+		playMarketLink = text[47]?.name;
 	}
 	useEffect(() => {
 		let time = localStorage.getItem('time');
@@ -155,9 +166,11 @@ const FormSection = ({ text, lang }) => {
 							)}
 						</div>
 						<div className='application'>
-							<button className='application-button'>
-								{appText}
-							</button>
+							<a href={playMarketLink}>
+								<button className='application-button'>
+									{appText}
+								</button>
+							</a>
 							<div className='icons'>
 								<a href={playMarketLink}>
 									<svg
