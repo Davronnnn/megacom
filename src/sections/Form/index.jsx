@@ -21,28 +21,21 @@ const FormSection = ({ text, lang }) => {
 	const [isSuccess, setIsSuccess] = useState(false);
 	const [isError, setIsError] = useState(false);
 
-	let appText;
-	let appStoreLink;
-	let playMarketLink;
+	let appText = '';
 
-	console.log(text[48].name, text[47].name);
-	if (lang == 'uz') {
-		appText = text[48]?.uz_text ? text[48]?.uz_text : 'App';
-		appStoreLink = text[48]?.name;
-		playMarketLink = text[47]?.name;
-	} else if (lang == 'ru') {
-		appText = text[48]?.ru_text ? text[48]?.ru_text : 'Приложение';
-		appStoreLink = text[48]?.name;
-		playMarketLink = text[47]?.name;
-	} else if (lang == 'en') {
-		appText = text[48]?.en_text ? text[48]?.en_text : 'App';
-		appStoreLink = text[48]?.name;
-		playMarketLink = text[47]?.name;
+	if (lang === 'uz') {
+		appText = text[48]?.uz_text ? text[48]?.uz_text : '';
+	} else if (lang === 'ru') {
+		appText = text[48]?.ru_text ? text[48]?.ru_text : '';
+	} else if (lang === 'eng') {
+		appText = text[48]?.en_text ? text[48]?.en_text : '';
 	} else {
-		appText = text[48]?.kg_text ? text[48]?.kg_text : 'App';
-		appStoreLink = text[48]?.name;
-		playMarketLink = text[47]?.name;
+		appText = text[48]?.kg_text ? text[48]?.kg_text : '';
 	}
+
+	let appStoreLink = text[48]?.name ? text[48]?.name : '';
+	let playMarketLink = text[47]?.name ? text[47]?.name : '';
+
 	useEffect(() => {
 		let time = localStorage.getItem('time');
 		let currentTime = new Date().getMinutes();
