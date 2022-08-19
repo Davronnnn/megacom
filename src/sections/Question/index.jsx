@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Accordion from '../../components/Accordion';
-import SectionHeader from '../../components/SectionHeader';
-import './question.scss';
-import questionArrow from '../../assets/questionarrow.png';
 import axios from 'axios';
+import Accordion from '../../components/Accordion';
+import './question.scss';
 const Questions = ({ text, lang }) => {
 	const [faq, setFaq] = useState([]);
 	const [data, setData] = useState([]);
@@ -45,65 +43,59 @@ const Questions = ({ text, lang }) => {
 
 	return (
 		<section className='question-section question'>
-			<SectionHeader title={sec_title}>
-				{lang === 'uz'
-					? faq.map((f, i) => {
-							return (
-								<Accordion key={i} title={f.question_uz}>
-									{f.answer_uz}
-								</Accordion>
-							);
-					  })
-					: lang === 'ru'
-					? faq.map((f, i) => {
-							return (
-								<Accordion key={i} title={f.question_ru}>
-									{f.answer_ru}
-								</Accordion>
-							);
-					  })
-					: lang === 'en'
-					? faq.map((f, i) => {
-							return (
-								<Accordion key={i} title={f.question_en}>
-									{f.answer_en}
-								</Accordion>
-							);
-					  })
-					: faq.map((f, i) => {
-							return (
-								<Accordion key={i} title={f.question_kg}>
-									{f.answer_kg}
-								</Accordion>
-							);
-					  })}
+			{lang === 'uz'
+				? faq.map((f, i) => {
+						return (
+							<Accordion key={i} title={f.question_uz}>
+								{f.answer_uz}
+							</Accordion>
+						);
+				  })
+				: lang === 'ru'
+				? faq.map((f, i) => {
+						return (
+							<Accordion key={i} title={f.question_ru}>
+								{f.answer_ru}
+							</Accordion>
+						);
+				  })
+				: lang === 'en'
+				? faq.map((f, i) => {
+						return (
+							<Accordion key={i} title={f.question_en}>
+								{f.answer_en}
+							</Accordion>
+						);
+				  })
+				: faq.map((f, i) => {
+						return (
+							<Accordion key={i} title={f.question_kg}>
+								{f.answer_kg}
+							</Accordion>
+						);
+				  })}
 
-				<div
-					onClick={fullData}
-					className='question-section__link mb mt-5'>
-					{isSmall ? (
-						<div>
-							{lang === 'uz' ? text[44]?.uz_text : ''}
-							{lang === 'ru' ? text[44]?.ru_text : ''}
-							{lang === 'en' ? text[44]?.en_text : ''}
-							{lang === 'kz' ? text[44]?.kg_text : ''}
-							<img src={questionArrow} alt='arrow' />
-						</div>
-					) : (
-						<div>
-							{lang === 'uz' ? text[46]?.uz_text : ''}
-							{lang === 'ru' ? text[46]?.ru_text : ''}
-							{lang === 'en' ? text[46]?.en_text : ''}
-							{lang === 'kz' ? text[46]?.kg_text : ''}
-							<img
-								src={questionArrow}
-								id='less-img'
-								alt='arrow'
-							/>
-						</div>
-					)}
-				</div>
-			</SectionHeader>
+			<div onClick={fullData} className='question-section__link mb mt-5'>
+				{isSmall ? (
+					<div>
+						{lang === 'uz' ? text[44]?.uz_text : ''}
+						{lang === 'ru' ? text[44]?.ru_text : ''}
+						{lang === 'en' ? text[44]?.en_text : ''}
+						{lang === 'kz' ? text[44]?.kg_text : ''}
+						{/* <img src={questionArrow} alt='arrow' /> */}
+						<button>Ko'rish</button>
+					</div>
+				) : (
+					<div>
+						{lang === 'uz' ? text[46]?.uz_text : ''}
+						{lang === 'ru' ? text[46]?.ru_text : ''}
+						{lang === 'en' ? text[46]?.en_text : ''}
+						{lang === 'kz' ? text[46]?.kg_text : ''}
+						<button>Ko'rish</button>
+						{/* <img src={questionArrow} id='less-img' alt='arrow' /> */}
+					</div>
+				)}
+			</div>
 		</section>
 	);
 };

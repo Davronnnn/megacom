@@ -1,11 +1,9 @@
 import React from 'react';
-import Card from '../../components/Card/index.jsx';
-import SectionHeader from '../../components/SectionHeader';
-import messageImg from '../../assets/message-coins.png';
 import './gifts.scss';
-
-const Gift = ({ text,lang }) => {
-
+import { Link } from 'react-scroll';
+import phone from '../../assets/phone-img.png';
+import phoneMb from '../../assets/phone-bg.png';
+const Gift = ({ text, lang }) => {
 	let title,
 		card_title1,
 		card_title2,
@@ -31,7 +29,7 @@ const Gift = ({ text,lang }) => {
 		text3 = text[18]?.uz_text;
 		participate = 'Qatnashish';
 	}
-	if (lang === 'ru') {
+	if (lang === 'Рус') {
 		title = text[9]?.ru_text;
 		card_title1 = text[10]?.ru_text;
 		card_title2 = text[11]?.ru_text;
@@ -72,46 +70,55 @@ const Gift = ({ text,lang }) => {
 	}
 
 	return (
-		<section className='gifts-section gifts'>
-			<SectionHeader title={title}>
-				<div className='cards '>
-					<Card
-						title={card_title1}
-						price={price1}
-						subtitle={text1}
-						participate={participate}></Card>
-					<Card
-						title={card_title2}
-						price={price2}
-						subtitle={text2}
-						participate={participate}></Card>
-
-					<Card
-						title={card_title3}
-						price={price3}
-						subtitle={text3}
-						participate={participate}></Card>
+		<section className='section gifts'>
+			<h3 className='section__title'>{title}</h3>
+			<div className='cards '>
+				<div className='card'>
+					<p className='card__price'>{price1}</p>
+					<h4 className='card__title'>{card_title1}</h4>
+					<p className='card__subtitle'>{text1}</p>
+					<Link
+						to='form'
+						spy={true}
+						smooth={true}
+						offset={50}
+						duration={2000}>
+						<button>{participate}</button>
+					</Link>
 				</div>
-				<div className='message flex mtb'>
-					<div className='coin-title '>
-						<h1>
-							{lang === 'uz' ? text[19]?.uz_text : ''}
-							{lang === 'ru' ? text[19]?.ru_text : ''}
-							{lang === 'en' ? text[19]?.en_text : ''}
-							{lang === 'kz' ? text[19]?.kg_text : ''}
-						</h1>
-						<p>
-							{lang === 'uz' ? text[20]?.uz_text : ''}
-							{lang === 'ru' ? text[20]?.ru_text : ''}
-							{lang === 'en' ? text[20]?.en_text : ''}
-							{lang === 'kz' ? text[20]?.kg_text : ''}
-						</p>
-					</div>
-					<div className='coin-image'>
-						<img src={messageImg} alt='coins' />
-					</div>
+				<div className='card'>
+					<p className='card__price'>{price2}</p>
+					<h4 className='card__title'>{card_title2}</h4>
+					<p className='card__subtitle'>{text2}</p>
+					<Link
+						to='form'
+						spy={true}
+						smooth={true}
+						offset={50}
+						duration={2000}>
+						<button>{participate}</button>
+					</Link>
 				</div>
-			</SectionHeader>
+				<div className='card'>
+					<p className='card__price'>{price3}</p>
+					<h4 className='card__title'>{card_title3}</h4>
+					<p className='card__subtitle'>{text3}</p>
+					<Link
+						to='form'
+						spy={true}
+						smooth={true}
+						offset={50}
+						duration={2000}>
+						<button>{participate}</button>
+					</Link>
+				</div>
+			</div>
+			<div className='mobile__section'>
+				<picture>
+					<source media='(max-width: 900px)' srcSet={phoneMb} />
+					<img src={phone} alt='gifts' />
+				</picture>
+			</div>
 		</section>
 	);
 };

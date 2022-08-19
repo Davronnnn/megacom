@@ -1,0 +1,259 @@
+.hero {
+	position: relative;
+
+	width: 100%;
+	height: 100%;
+
+	margin-top: 90px;
+
+	&__content {
+		position: relative;
+		z-index: 2;
+		max-width: 550px;
+		&__picture img {
+			transform: translateX(-10%);
+		}
+
+		&__text {
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 140%;
+			/* or 34px */
+
+			color: #ffffff;
+		}
+	}
+	&__bg {
+		position: absolute;
+		top: 200px;
+		right: 0;
+		transform: translateX(12%);
+	}
+
+	&__button {
+		padding: 11.5px 40px;
+
+		background-color: transparent;
+		border: 1px solid #ffffff;
+		border-radius: 10px;
+
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 140%;
+		color: #ffffff;
+
+		transition: background-color 0.3s ease-in-out;
+		outline: none;
+		cursor: pointer;
+	}
+	&__button:nth-child(1) {
+		margin-right: 24px;
+	}
+	&__button:hover {
+		background-color: rgba(0, 198, 66, 1);
+	}
+}
+
+@media screen and (min-width: 2560px) {
+	.main {
+		#card1 {
+			position: absolute;
+			top: 0%;
+			right: -5%;
+		}
+		#card2 {
+			position: absolute;
+			bottom: -40%;
+			right: 30%;
+			width: 500px;
+		}
+		&__title {
+			position: relative;
+			width: 40%;
+			margin: 25vh 5vw 0 0;
+
+			h1 {
+				font-family: 'Roboto ';
+
+				font-style: normal;
+				font-weight: 700;
+				font-size: 80px;
+				line-height: 92px;
+				/* or 120% */
+
+				font-feature-settings: 'liga' off;
+
+				/* Neutral/900 */
+
+				color: #111827;
+			}
+			p {
+				font-family: 'Roboto';
+				font-style: normal;
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 32px;
+				/*	or 156% */
+
+				font-feature-settings: 'liga' off;
+
+				/* Neutral/700 */
+
+				color: #374151;
+
+				width: 80%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 2559px) and (min-width: 1920px) {
+	.main {
+		.header-card1 {
+			padding: 10px 20px;
+
+			position: absolute;
+			right: 5%;
+			top: -30%;
+
+			padding: 10px;
+
+			div {
+				display: flex;
+				flex-direction: column;
+				padding-top: 10px;
+			}
+			h4 {
+				padding-top: 2px;
+				font-size: 42px;
+			}
+		}
+		#card1 {
+			position: absolute;
+			top: 20%;
+			right: -5%;
+		}
+		#card2 {
+			position: absolute;
+			bottom: -80%;
+			right: 30%;
+			width: 500px;
+		}
+		&__title {
+			position: relative;
+			width: 40%;
+			margin: 25vh 5vw 0 0;
+
+			h1 {
+				font-family: 'Roboto ';
+
+				font-style: normal;
+				font-weight: 700;
+				font-size: 60px;
+				line-height: 72px;
+				/* or 120% */
+
+				font-feature-settings: 'liga' off;
+
+				/* Neutral/900 */
+
+				color: #111827;
+			}
+			p {
+				font-family: 'Roboto';
+				font-style: normal;
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 28px;
+				/*	or 156% */
+
+				font-feature-settings: 'liga' off;
+
+				/* Neutral/700 */
+
+				color: #374151;
+
+				width: 80%;
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.main {
+		background-position: right;
+		&__title {
+			width: 100%;
+			margin: 15vh 5vw;
+			h1 {
+				text-align: center;
+			}
+			p {
+				width: 100%;
+				text-align: center;
+			}
+		}
+		&__buttons {
+			width: 50%;
+			span {
+				p {
+					font-size: 12px;
+				}
+			}
+		}
+
+		.header-card1 {
+			top: 50%;
+		}
+	}
+}
+@media screen and (max-width: 560px) {
+	.main {
+		min-height: 100vh;
+		&__title {
+			width: 100%;
+			margin: 10vh 5vw;
+			margin-bottom: 2vh;
+			h1 {
+				text-align: center;
+			}
+			p {
+				width: 100%;
+				text-align: center;
+			}
+		}
+		&__buttons {
+			width: 80%;
+		}
+
+		.header-card1,
+		.header-card2 {
+			position: relative;
+			top: 100%;
+			left: 0;
+			margin: 0 auto;
+		}
+		.header-card1 {
+			margin-bottom: 30px;
+		}
+	}
+}
+@media screen and (min-width: 769px) and (max-width: 1220px) {
+	.main {
+		background-position: top;
+		&__buttons {
+			span {
+				padding: 0;
+				p {
+					line-height: 1.2rem;
+					padding: 0;
+					margin: 0;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

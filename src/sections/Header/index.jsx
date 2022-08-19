@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 
-import logo from '../../assets/logo.png';
+import logo from '../../assets/header-logo.png';
+import logoSm from '../../assets/header-logo-mb.png';
+import './Header.scss';
 
-import './Navbar.scss';
-
-const Navbar = ({ load, setLoad, text, lang, setLang }) => {
+const Header = ({ load, setLoad, text, lang, setLang }) => {
 	const [open, setOpen] = useState(false);
 	const [small, setSmall] = useState(false);
 
@@ -65,20 +65,19 @@ const Navbar = ({ load, setLoad, text, lang, setLang }) => {
 	};
 
 	return (
-		<nav className={`header ${small ? 'small-nav' : ''}`}>
-			<a target='_blank' rel='noreferrer' href='http://megacom.kg'>
-				<img src={logo} alt='Megacom' />
+		<header className={`header ${small ? 'small-nav' : ''}`}>
+			<a
+				className='logo'
+				target='_blank'
+				rel='noreferrer'
+				href='http://megacom.kg'>
+				<picture>
+					<source srcSet={logoSm} media='(max-width: 1100px)' />
+					<img src={logo} alt='logo' />
+				</picture>
 			</a>
-			<div
-				className='mobile-icon'
-				style={styles.container}
-				onClick={handleClick}>
-				<div style={{ ...styles.line, ...styles.lineTop }} />
-				<div style={{ ...styles.line, ...styles.lineMiddle }} />
-				<div style={{ ...styles.line, ...styles.lineBottom }} />
-			</div>
 
-			<div className='nav-links' id='menu__mobile'>
+			<ul className='nav__links' id='menu__mobile'>
 				{lang === 'uz' ? (
 					<>
 						<Link
@@ -217,7 +216,7 @@ const Navbar = ({ load, setLoad, text, lang, setLang }) => {
 				) : (
 					''
 				)}
-				{lang === 'ru' ? (
+				{lang === 'Рус' ? (
 					<>
 						<Link
 							to='gifts'
@@ -263,20 +262,28 @@ const Navbar = ({ load, setLoad, text, lang, setLang }) => {
 				) : (
 					''
 				)}
+			</ul>
+			<select
+				name=''
+				value={lang}
+				id='lang'
+				onChange={(e) => translation(e)}>
+				<option value='kz'>Kg</option>
+				<option value='Рус'>Рус</option>
+				{/* <option value='en'>en</option>
+					<option value='uz'>uz</option> */}
+			</select>
 
-				<select
-					name=''
-					value={lang}
-					id='lang'
-					onChange={(e) => translation(e)}>
-					<option value='kz'>kg</option>
-					<option value='ru'>ru</option>
-					<option value='en'>en</option>
-					<option value='uz'>uz</option>
-				</select>
+			<div
+				className='mobile__icon'
+				style={styles.container}
+				onClick={handleClick}>
+				<div style={{ ...styles.line, ...styles.lineTop }} />
+				<div style={{ ...styles.line, ...styles.lineMiddle }} />
+				<div style={{ ...styles.line, ...styles.lineBottom }} />
 			</div>
-		</nav>
+		</header>
 	);
 };
 
-export default Navbar;
+export default Header;

@@ -1,46 +1,10 @@
-.gifts-section {
+.gifts {
+	margin-top: 300px;
 	.cards {
 		// padding: 0 10%;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-gap: 50px;
-	}
-	.message {
-		justify-content: space-between;
-		align-items: center;
-		padding: 30px;
-		background: #f3f8fe;
-		border-radius: 12px;
-
-		.coin-title {
-			h1 {
-				font-family: 'Roboto';
-				font-style: normal;
-				font-weight: 600;
-				font-size: 54px;
-				line-height: 63px;
-
-				color: #2d1d3f;
-			}
-			p {
-				font-family: 'Roboto';
-				font-style: normal;
-				font-weight: 400;
-				font-size: 17px;
-				line-height: 20px;
-
-				color: rgba(45, 29, 63, 0.8);
-			}
-		}
-
-		.coin-image {
-			min-height: 150px;
-			img {
-				position: absolute;
-				right: 10%;
-				transform: translateY(-40px);
-			}
-		}
 	}
 }
 
@@ -59,5 +23,3 @@
 		}
 	}
 }
-
-

@@ -1,4 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@font-face {
+	font-family: 'Montserrat-Regular';
+	src: url('./assets/Fonts/Montserrat-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat-Bold';
+	src: url('./assets/Fonts/Montserrat-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat-Medium';
+	src: url('./assets/Fonts/Montserrat-Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat-SemiBold';
+	src: url('./assets/Fonts/Montserrat-SemiBold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat-ExtraBold';
+	src: url('./assets/Fonts/Montserrat-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Montserrat-Thin';
+	src: url('./assets/Fonts/Montserrat-Thin.ttf') format('truetype');
+}
+%regular-font {
+	font-family: 'Montserrat-Regular';
+}
+%bold-font {
+	font-family: 'Montserrat-Bold';
+}
+%medium-font {
+	font-family: 'Montserrat-Medium';
+}
+%semi-bold-font {
+	font-family: 'Montserrat-SemiBold';
+}
+%extra-bold-font {
+	font-family: 'Montserrat-ExtraBold';
+}
+%thin-font {
+	font-family: 'Montserrat-Thin';
+}
 
 * {
 	margin: 0;
@@ -6,26 +47,27 @@
 	box-sizing: border-box;
 }
 
-$text-color: #fff;
-$main-margin: 120px;
-.flex {
-	display: flex;
+#root {
+	background-color: rgba(0, 0, 0, 1);
+	overflow-x: hidden;
+}
+body {
+	font-family: 'Montserrat-Regular';
+	font-style: normal;
+	font-weight: 400;
+}
+.custom-container {
+	max-width: 1440px;
+	margin: 0 9.6vw;
 }
 
-.flex-c-around {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-}
-
-.mtb {
-	margin: $main-margin 0;
-}
-.mt {
-	margin-top: $main-margin;
-}
-.mb {
-	margin-bottom: $main-margin;
+.section {
+	&__title {
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 140%;
+		color: #ffffff;
+	}
 }
 
 // mobile
@@ -33,28 +75,7 @@ $main-margin: 120px;
 	.section-header__titles {
 		margin-bottom: 40px;
 	}
-	.gifts-section {
-		.cards {
-			padding: 0 10%;
-			grid-template-columns: 1fr;
-		}
-		.message {
-			flex-direction: column;
-			text-align: center;
-			.coin-title {
-				h1 {
-					font-size: 32px;
-				}
-				p {
-					font-size: 14px;
-				}
-			}
-			.coin-image img {
-				right: 20%;
-				transform: translateY(0);
-			}
-		}
-	}
+
 	.registration-section {
 		.question-cards {
 			grid-template-columns: 1fr !important;
