@@ -23,7 +23,7 @@ const FormSection = ({ text, lang }) => {
 		appText = text[48]?.uz_text ? text[48]?.uz_text : '';
 	} else if (lang === 'Рус') {
 		appText = text[48]?.ru_text ? text[48]?.ru_text : '';
-	} else if (lang === 'eng') {
+	} else if (lang === 'en') {
 		appText = text[48]?.en_text ? text[48]?.en_text : '';
 	} else {
 		appText = text[48]?.kg_text ? text[48]?.kg_text : '';
