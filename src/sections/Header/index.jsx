@@ -25,7 +25,7 @@ const Header = ({ load, setLoad, text, lang, setLang }) => {
 		setOpen((e) => !e);
 		var menu = document.getElementById('menu__mobile');
 		if (open) {
-			menu.style.left = '110%';
+			menu.style.left = '200vw';
 		} else {
 			menu.style.left = '0%';
 		}

@@ -74,9 +74,19 @@ body {
 
 .section {
 	&__title {
+		font-family: 'Montserrat-Bold';
+		font-style: normal;
 		font-weight: 700;
 		font-size: 48px;
 		line-height: 140%;
+
+		color: #ffffff;
+	}
+	&__subtitle {
+		margin-top: 14px;
+		font-size: 20px;
+		line-height: 140%;
+		/* or 162% */
 		color: #ffffff;
 	}
 }
@@ -85,42 +95,23 @@ body {
 }
 // mobile
 @media screen and (max-width: 768px) {
+	.mt {
+		margin-top: 84px;
+	}
 	.custom-container {
 		margin: 0 20px;
 	}
 	.section-header__titles {
 		margin-bottom: 40px;
 	}
-
-	.registration-section {
-		.question-cards {
-			grid-template-columns: 1fr !important;
-			svg {
-				display: none;
-			}
-		}
+	.section__title {
+		font-size: 36px;
+		line-height: 140%;
+		width: 80%;
 	}
-	.question-section__link a {
-		font-size: 24px !important;
-	}
-	.accordion {
-		.accordion-title {
-			font-size: 24px !important;
-		}
-		.accordion-content {
-			font-size: 18px !important;
-		}
-	}
-	footer .footer-main {
-		flex-direction: column;
-		text-align: center;
-		button {
-			width: 100%;
-			justify-content: center !important;
-			font-size: 20px;
-		}
-	}
-	.footer-bottom {
-		text-align: center;
+	.section__subtitle {
+		width: 90%;
+		font-size: 16px;
+		line-height: 22.4px;
 	}
 }

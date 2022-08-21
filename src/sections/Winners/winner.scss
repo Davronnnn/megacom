@@ -1,5 +1,4 @@
 .winner-section {
-	margin-top: 100px;
 	padding: 40px 0;
 
 	.winner-table {
@@ -42,13 +41,16 @@
 	}
 }
 @media (max-width: 768px) {
-	.winner-table {
-		tr,
-		th,
-		td {
-			font-size: 10px !important;
-			line-height: 20px !important;
-			letter-spacing: normal !important;
+	.winner-section {
+		.winner-table {
+			margin-top: 44px;
+			tr,
+			th,
+			td {
+				font-size: 16px !important;
+				line-height: 22.4px !important;
+				letter-spacing: normal !important;
+			}
 		}
 	}
 }

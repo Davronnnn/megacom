@@ -42,7 +42,7 @@ const Questions = ({ text, lang }) => {
 	}, [isSmall, data]);
 
 	return (
-		<section className='question-section question'>
+		<section className='question-section question mt'>
 			<h3 className='question-section__title'>{sec_title}</h3>
 			{lang === 'uz'
 				? faq.map((f, i) => {

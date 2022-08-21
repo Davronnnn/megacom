@@ -15,9 +15,9 @@ const Footer = ({ text, lang }) => {
 	}, []);
 
 	return (
-		<footer className='footer'>
+		<footer className='footer mt section'>
 			<div className='footer-main'>
-				<h3>
+				<h3 className='section__title'>
 					{lang === 'uz' ? text[36]?.uz_text : ''}
 					{lang === 'Рус' ? text[36]?.ru_text : ''}
 					{lang === 'en' ? text[36]?.en_text : ''}

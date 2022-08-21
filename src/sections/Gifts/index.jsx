@@ -2,7 +2,6 @@ import React from 'react';
 import './gifts.scss';
 import { Link } from 'react-scroll';
 import phone from '../../assets/phone-img.png';
-import phoneMb from '../../assets/phone-bg.png';
 import phoneKg from '../../assets/phone-kg.png';
 const Gift = ({ text, lang }) => {
 	let title,
@@ -73,14 +72,12 @@ const Gift = ({ text, lang }) => {
 	if (lang === 'Рус') {
 		picture = (
 			<picture>
-				<source media='(max-width: 900px)' srcSet={phoneMb} />
 				<img src={phone} alt='gifts' />
 			</picture>
 		);
 	} else if (lang === 'kz') {
 		picture = (
 			<picture>
-				<source media='(max-width: 900px)' srcSet={phoneMb} />
 				<img src={phoneKg} alt='gifts' />
 			</picture>
 		);

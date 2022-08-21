@@ -1,13 +1,10 @@
 .question-section {
-	margin-top: 100px;
-
 	&__title {
-		font-family: 'Montserrat';
+		font-family: 'Montserrat-Bold';
 		font-style: normal;
 		font-weight: 700;
 		font-size: 48px;
 		line-height: 140%;
-		/* or 67px */
 
 		color: #ffffff;
 	}
@@ -19,14 +16,8 @@
 			background: #00c642;
 			border-radius: 10px;
 			border: none;
-
-			font-family: 'Montserrat';
-			font-style: normal;
-			font-weight: 400;
 			font-size: 20px;
 			line-height: 140%;
-			/* identical to box height, or 28px */
-
 			color: #ffffff;
 		}
 	}
@@ -43,6 +34,12 @@
 			display: flex;
 			justify-content: center;
 			margin-bottom: 60px;
+		}
+		&__link {
+			button {
+				font-size: 14px;
+				line-height: 140%;
+			}
 		}
 	}
 }

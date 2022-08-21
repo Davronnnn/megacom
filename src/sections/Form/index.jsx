@@ -113,14 +113,14 @@ const FormSection = ({ text, lang }) => {
 		}
 	};
 	return (
-		<section className='form form'>
-			<div className='form__message flex mtb'>
-				<h1 className='wow fadeIn'>
+		<section className='form mt section'>
+			<div className='form__message  mtb'>
+				<h3 className='wow fadeIn section__title'>
 					{lang === 'uz' ? text[45]?.uz_text : ''}
 					{lang === 'Рус' ? text[45]?.ru_text : ''}
 					{lang === 'en' ? text[45]?.en_text : ''}
 					{lang === 'kz' ? text[45]?.kg_text : ''}
-				</h1>
+				</h3>
 				<div className='submits'>
 					<input
 						type='text'
@@ -155,7 +155,7 @@ const FormSection = ({ text, lang }) => {
 					)}
 				</div>
 				<div className='application'>
-					<p >{appText}</p>
+					<p>{appText}</p>
 
 					<div className='icons'>
 						<a href={playMarketLink}>

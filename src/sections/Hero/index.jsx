@@ -12,7 +12,7 @@ const Hero = ({ load, lang, setLang, setLoad, text }) => {
 			<div className='hero__content'>
 				<picture className='hero__content__picture'>
 					<source
-						media='(max-width: 767px)'
+						media='(max-width: 769px)'
 						srcSet={heroTitleImgMB}
 					/>
 					<img
@@ -57,7 +57,6 @@ const Hero = ({ load, lang, setLang, setLoad, text }) => {
 
 			<div className='hero__bg'>
 				<picture className='hero__bg-picture'>
-					<source media='(max-width: 767px)' srcSet={heroImgMb} />
 					<img
 						data-wow-duration='0.5s'
 						data-wow-delay='0.2s'

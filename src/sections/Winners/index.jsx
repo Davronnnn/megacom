@@ -8,6 +8,7 @@ const WinnersList = ({ text, lang }) => {
 	const [winners, setWinners] = useState([]);
 	const [title, setTitle] = useState('');
 	const [subtitle, setSubtitle] = useState('');
+	const [currentPage, setCurrentPage] = useState(1);
 
 	useEffect(() => {
 		axios
@@ -23,7 +24,7 @@ const WinnersList = ({ text, lang }) => {
 			setTitle(text[21]?.uz_text);
 			setSubtitle(text[22]?.uz_text);
 		}
-		if (lang === 'ru') {
+		if (lang === 'Рус') {
 			setTitle(text[21]?.ru_text);
 			setSubtitle(text[22]?.ru_text);
 		}
@@ -37,8 +38,6 @@ const WinnersList = ({ text, lang }) => {
 		}
 	}, [lang, title, winners, subtitle, text]);
 
-	const [currentPage, setCurrentPage] = useState(1);
-
 	const currentTableData = useMemo(() => {
 		const firstPageIndex = (currentPage - 1) * PageSize;
 		const lastPageIndex = firstPageIndex + PageSize;
@@ -46,9 +45,9 @@ const WinnersList = ({ text, lang }) => {
 	}, [currentPage, winners]);
 
 	return (
-		<section className='winner-section winners'>
-			<h3>{title}</h3>
-			<p>{subtitle}</p>
+		<section className='winner-section section winners mt'>
+			<h3 className='section__title'>{title}</h3>
+			<p className='section__subtitle'>{subtitle}</p>
 			<div className='winner-table'>
 				<table className='table table-striped wow fadeIn'>
 					<thead>
@@ -85,20 +84,6 @@ const WinnersList = ({ text, lang }) => {
 								<td>{winner.prize}</td>
 							</tr>
 						))}
-						<tr>
-							<th scope='row'></th>
-							<th scope='row'>1</th>
-							<td>2001</td>
-							<td>+998911234567</td>
-							<td>1000</td>
-						</tr>
-						<tr>
-							<th scope='row'></th>
-							<th scope='row'>1</th>
-							<td>2001</td>
-							<td>+998911234567</td>
-							<td>1000</td>
-						</tr>
 					</tbody>
 				</table>
 				<Pagination
