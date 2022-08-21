@@ -1,61 +1,42 @@
 .winner-section {
-	background: #f3f8fe;
+	margin-top: 100px;
 	padding: 40px 0;
-	.winner-table {
-		// display: grid;
-		// grid-template-columns: 1fr 4fr 4fr 3fr;
 
-		.table-striped tbody tr:nth-of-type(odd) {
-			background-color: #fff !important;
-		}
+	.winner-table {
+		margin-top: 60px;
+
 		table {
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 			padding: 0 20px;
 			border-radius: 14px;
+			border: none;
 		}
 		tr {
 			padding: 0 20px;
 			margin: 0 20px;
+
+			border-bottom: 1px solid #00c642;
 		}
 		thead {
 			th {
+				border: none;
 				font-family: 'Roboto';
 				font-style: normal;
 				font-weight: 500;
 				font-size: 30px;
 				line-height: 70px;
-				/* or 233% */
 
-				color: rgba(0, 0, 0, 0.2);
+				color: #fff;
 			}
 		}
 		tbody {
-			background: #f3f8fe;
 			border: none;
-			// tr {
-			// 	// border: none;;
+
 			// }
-			th {
-				font-family: 'Roboto';
-				font-style: normal;
-				font-weight: 400;
-				font-size: 30px;
-				line-height: 70px;
-				/* or 233% */
-
-				color: rgba(25, 25, 27, 0.3);
-			}
+			th,
+			tr,
 			td {
-				font-family: 'Roboto';
-				font-style: normal;
-				font-weight: 500;
-				font-size: 28px;
-				line-height: 70px;
-				/* or 250% */
-
-				letter-spacing: 3px;
-
-				color: rgba(25, 25, 27, 0.6);
+				border-top: none;
 			}
 		}
 	}

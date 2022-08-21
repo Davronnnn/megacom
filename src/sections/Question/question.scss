@@ -1,38 +1,38 @@
 .question-section {
-	.section-header__titles {
-		margin: 0 25%;
-		display: flex;
-		justify-content: center;
-		margin-bottom: 60px;
+	margin-top: 100px;
+
+	&__title {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 140%;
+		/* or 67px */
+
+		color: #ffffff;
 	}
 	&__link {
-		div {
-			font-family: 'Roboto';
+		text-align: center;
+
+		button {
+			padding: 11.5px 34.5px;
+			background: #00c642;
+			border-radius: 10px;
+			border: none;
+
+			font-family: 'Montserrat';
 			font-style: normal;
 			font-weight: 400;
-			font-size: 34px;
-			line-height: 28px;
-			text-decoration: none;
-			/* identical to box height, or 82% */
+			font-size: 20px;
+			line-height: 140%;
+			/* identical to box height, or 28px */
 
-			cursor: pointer;
-
-			color: #20bf6b;
-			img {
-				margin-left: 7px;
-			}
+			color: #ffffff;
 		}
 	}
 
 	#less-img {
 		transform: rotate(-90deg);
-	}
-}
-@media screen and (min-width: 2560px) {
-	.gifts-section {
-		.cards {
-			padding: 0 10%;
-		}
 	}
 }
 

@@ -1,5 +1,5 @@
 .header {
-	// position: sticky;
+	// position: fixed;
 	top: 0;
 
 	display: flex;
@@ -109,6 +109,5 @@
 	}
 }
 .small-nav {
-	padding: 20px 5vw;
 	background-color: rgba($color: #ded7f6, $alpha: 0.7);
 }

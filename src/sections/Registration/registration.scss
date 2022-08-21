@@ -1,10 +1,104 @@
 .registration-section {
-	.question-cards {
+	&__content {
+		margin-top: 150px;
 		display: grid;
-		grid-template-columns: 3fr 1fr 3fr 1fr 3fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 150px;
+		color: #fff;
+		text-align: center;
 
-		svg {
-			width: 40px;
+		@media (max-width: 1024px) {
+			grid-template-columns: 1fr 1fr;
+			gap: 100px;
+		}
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr;
+			gap: 150px;
+			margin-top: 150px;
+		}
+
+		&-item {
+			position: relative;
+		}
+		&-item:nth-child(1)::before {
+			content: '1';
+			display: block;
+			background-color: #00c642;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 30;
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 800;
+			font-size: 150px;
+
+			/* identical to box height, or 65% */
+
+			text-align: center;
+			font-feature-settings: 'salt' on, 'liga' off;
+
+			background: linear-gradient(
+				180deg,
+				rgba(0, 198, 66, 0.5) 0%,
+				rgba(39, 144, 59, 0.5) 100%
+			);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+		&-item:nth-child(2)::before {
+			content: '2';
+			display: block;
+			background-color: #00c642;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 30;
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 800;
+			font-size: 150px;
+
+			text-align: center;
+			font-feature-settings: 'salt' on, 'liga' off;
+
+			background: linear-gradient(
+				180deg,
+				rgba(0, 198, 66, 0.5) 0%,
+				rgba(39, 144, 59, 0.5) 100%
+			);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+		&-item:nth-child(3)::before {
+			content: '3';
+			display: block;
+			background-color: #00c642;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 30;
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 800;
+			font-size: 150px;
+
+			text-align: center;
+			font-feature-settings: 'salt' on, 'liga' off;
+
+			background: linear-gradient(
+				180deg,
+				rgba(0, 198, 66, 0.5) 0%,
+				rgba(39, 144, 59, 0.5) 100%
+			);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
 		}
 	}
 }

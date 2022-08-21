@@ -1,25 +1,101 @@
 .gifts {
 	margin-top: 300px;
+
+	h3 {
+		font-family: 'Montserrat-Bold';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 140%;
+
+		color: #ffffff;
+	}
 	.cards {
-		// padding: 0 10%;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-gap: 50px;
+
+		.gift-card {
+			margin-top: 60px;
+
+			.gift-card__price {
+				font-family: 'Montserrat-SemiBold';
+				font-style: normal;
+				font-weight: 600;
+				font-size: 49px;
+
+				background: linear-gradient(180deg, #00c642 0%, #1a6028 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
+			}
+			.gift-card__title {
+				margin-top: 20px;
+				font-family: 'Montserrat-SemiBold';
+				font-style: normal;
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 32px;
+
+				font-feature-settings: 'salt' on, 'liga' off;
+
+				color: #ffffff;
+			}
+			.gift-card__subtitle {
+				margin-top: 8px;
+
+				font-family: 'Montserrat-Regular';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 26px;
+				/* or 162% */
+
+				font-feature-settings: 'salt' on, 'liga' off;
+
+				color: #ffffff;
+			}
+			.gift-card__button {
+				margin-top: 20px;
+				background-color: transparent;
+				border: none;
+				font-family: 'Montserrat-Medium';
+				font-style: normal;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 20px;
+
+				font-feature-settings: 'salt' on, 'liga' off;
+
+				color: #27903b;
+				cursor: pointer;
+				span {
+					font-size: 2em;
+					text-align: center;
+					vertical-align: bottom;
+				}
+			}
+		}
+	}
+	.mobile__section {
+		margin-top: 100px;
 	}
 }
 
-@media screen and (min-width: 2560px) {
-	.gifts-section {
+@media screen and (max-width: 2559px) and (min-width: 1920px) {
+	.gifts {
 		.cards {
 			padding: 0 10%;
 		}
 	}
 }
 
-@media screen and (max-width: 2559px) and (min-width: 1920px) {
-	.gifts-section {
+@media screen and (max-width: 768px) {
+	.gifts {
 		.cards {
 			padding: 0 10%;
+			grid-template-columns: 1fr;
 		}
 	}
 }

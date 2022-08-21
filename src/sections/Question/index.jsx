@@ -11,7 +11,7 @@ const Questions = ({ text, lang }) => {
 	if (lang === 'uz') {
 		sec_title = text[34]?.uz_text;
 	}
-	if (lang === 'ru') {
+	if (lang === 'Рус') {
 		sec_title = text[34]?.ru_text;
 	}
 	if (lang === 'en') {
@@ -43,6 +43,7 @@ const Questions = ({ text, lang }) => {
 
 	return (
 		<section className='question-section question'>
+			<h3 className='question-section__title'>{sec_title}</h3>
 			{lang === 'uz'
 				? faq.map((f, i) => {
 						return (
@@ -51,7 +52,7 @@ const Questions = ({ text, lang }) => {
 							</Accordion>
 						);
 				  })
-				: lang === 'ru'
+				: lang === 'Рус'
 				? faq.map((f, i) => {
 						return (
 							<Accordion key={i} title={f.question_ru}>
@@ -59,11 +60,11 @@ const Questions = ({ text, lang }) => {
 							</Accordion>
 						);
 				  })
-				: lang === 'en'
+				: lang === 'kz'
 				? faq.map((f, i) => {
 						return (
-							<Accordion key={i} title={f.question_en}>
-								{f.answer_en}
+							<Accordion key={i} title={f.question_kg}>
+								{f.answer_kg}
 							</Accordion>
 						);
 				  })
@@ -77,23 +78,19 @@ const Questions = ({ text, lang }) => {
 
 			<div onClick={fullData} className='question-section__link mb mt-5'>
 				{isSmall ? (
-					<div>
+					<button>
 						{lang === 'uz' ? text[44]?.uz_text : ''}
-						{lang === 'ru' ? text[44]?.ru_text : ''}
+						{lang === 'Рус' ? text[44]?.ru_text : ''}
 						{lang === 'en' ? text[44]?.en_text : ''}
 						{lang === 'kz' ? text[44]?.kg_text : ''}
-						{/* <img src={questionArrow} alt='arrow' /> */}
-						<button>Ko'rish</button>
-					</div>
+					</button>
 				) : (
-					<div>
+					<button>
 						{lang === 'uz' ? text[46]?.uz_text : ''}
-						{lang === 'ru' ? text[46]?.ru_text : ''}
+						{lang === 'Рус' ? text[46]?.ru_text : ''}
 						{lang === 'en' ? text[46]?.en_text : ''}
 						{lang === 'kz' ? text[46]?.kg_text : ''}
-						<button>Ko'rish</button>
-						{/* <img src={questionArrow} id='less-img' alt='arrow' /> */}
-					</div>
+					</button>
 				)}
 			</div>
 		</section>

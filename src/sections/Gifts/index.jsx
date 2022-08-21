@@ -3,6 +3,7 @@ import './gifts.scss';
 import { Link } from 'react-scroll';
 import phone from '../../assets/phone-img.png';
 import phoneMb from '../../assets/phone-bg.png';
+import phoneKg from '../../assets/phone-kg.png';
 const Gift = ({ text, lang }) => {
 	let title,
 		card_title1,
@@ -68,57 +69,74 @@ const Gift = ({ text, lang }) => {
 		text3 = text[18]?.kg_text;
 		participate = 'Kатышуу';
 	}
+	let picture;
+	if (lang === 'Рус') {
+		picture = (
+			<picture>
+				<source media='(max-width: 900px)' srcSet={phoneMb} />
+				<img src={phone} alt='gifts' />
+			</picture>
+		);
+	} else if (lang === 'kz') {
+		picture = (
+			<picture>
+				<source media='(max-width: 900px)' srcSet={phoneMb} />
+				<img src={phoneKg} alt='gifts' />
+			</picture>
+		);
+	}
 
 	return (
 		<section className='section gifts'>
 			<h3 className='section__title'>{title}</h3>
 			<div className='cards '>
-				<div className='card'>
-					<p className='card__price'>{price1}</p>
-					<h4 className='card__title'>{card_title1}</h4>
-					<p className='card__subtitle'>{text1}</p>
+				<div className='gift-card'>
+					<p className='gift-card__price'>{price1}</p>
+					<h4 className='gift-card__title'>{card_title1}</h4>
+					<p className='gift-card__subtitle'>{text1}</p>
 					<Link
 						to='form'
 						spy={true}
 						smooth={true}
 						offset={50}
 						duration={2000}>
-						<button>{participate}</button>
+						<button className='gift-card__button'>
+							{participate} <span>&#8594;</span>
+						</button>
 					</Link>
 				</div>
-				<div className='card'>
-					<p className='card__price'>{price2}</p>
-					<h4 className='card__title'>{card_title2}</h4>
-					<p className='card__subtitle'>{text2}</p>
+				<div className='gift-card'>
+					<p className='gift-card__price'>{price2}</p>
+					<h4 className='gift-card__title'>{card_title2}</h4>
+					<p className='gift-card__subtitle'>{text2}</p>
 					<Link
 						to='form'
 						spy={true}
 						smooth={true}
 						offset={50}
 						duration={2000}>
-						<button>{participate}</button>
+						<button className='gift-card__button'>
+							{participate} <span>&#8594;</span>
+						</button>
 					</Link>
 				</div>
-				<div className='card'>
-					<p className='card__price'>{price3}</p>
-					<h4 className='card__title'>{card_title3}</h4>
-					<p className='card__subtitle'>{text3}</p>
+				<div className='gift-card'>
+					<p className='gift-card__price'>{price3}</p>
+					<h4 className='gift-card__title'>{card_title3}</h4>
+					<p className='gift-card__subtitle'>{text3}</p>
 					<Link
 						to='form'
 						spy={true}
 						smooth={true}
 						offset={50}
 						duration={2000}>
-						<button>{participate}</button>
+						<button className='gift-card__button'>
+							{participate} <span>&#8594;</span>
+						</button>
 					</Link>
 				</div>
 			</div>
-			<div className='mobile__section'>
-				<picture>
-					<source media='(max-width: 900px)' srcSet={phoneMb} />
-					<img src={phone} alt='gifts' />
-				</picture>
-			</div>
+			<div className='mobile__section'>{picture}</div>
 		</section>
 	);
 };

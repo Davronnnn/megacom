@@ -1,88 +1,69 @@
-.form-section {
-	.message {
-		justify-content: space-between;
-		align-items: center;
-		padding: 30px;
-		background: #f3f8fe;
+.form {
+	margin-top: 100px;
+	&__message {
+		padding: 42px 220px;
+		background: #151515;
 		border-radius: 12px;
+		color: #ffffff;
 
-		.coin-title {
-			h1 {
-				font-family: 'Roboto';
-				font-style: normal;
-				font-weight: 600;
-				font-size: 54px;
-				line-height: 63px;
+		h1 {
+			font-family: 'Montserrat';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 48px;
+			line-height: 59px;
+			text-align: center;
+			font-feature-settings: 'salt' on, 'liga' off;
+		}
 
-				color: #2d1d3f;
-			}
+		.submits {
+			display: flex;
+			justify-content: space-evenly;
+			margin-top: 31px;
 			input {
-				font-family: 'Roboto';
-				font-style: normal;
-				font-weight: 400;
-				font-size: 17px;
+				padding: 17.5px 24px;
 
-				color: rgba(45, 29, 63, 0.8);
-				background: transparent;
-				border: 1px solid #732c9f;
-				border-radius: 10px;
-				width: 50%;
-				padding: 10px 20px;
-
-				&:active,
-				&:focus,
-				&:target,
-				&:read-write {
-					color: #732c9f;
-				}
-			}
-			button {
-				background: #fff;
-				border: 1px solid #732c9f;
+				background-color: transparent;
+				border: 1px solid #00c642;
 				border-radius: 10px;
 
-				font-family: 'Roboto';
-				font-style: normal;
-				font-weight: 600;
 				font-size: 20px;
-				line-height: 24px;
-				/* identical to box height, or 120% */
+				line-height: 140%;
 
-				text-align: center;
-				font-feature-settings: 'liga' off;
+				color: #ffffff;
+			}
+			input::placeholder {
+				color: #ffffff;
+			}
+
+			button {
+				background-color: transparent;
+				border: 1px solid #00c642;
+				border-radius: 10px;
+
+				font-size: 20px;
+				line-height: 140%;
 
 				cursor: pointer;
-				color: #58227a;
-				padding: 10px 20px;
-				margin-left: 30px;
-			}
-
-			.submits {
-				display: flex;
+				padding: 17.5px 57.5px;
+				margin-left: 20px;
 			}
 		}
+
 		.application {
-			margin-top: 30px;
-			.application-button {
+			margin-top: 38px;
+			p {
 				width: 50%;
-				margin-left: 0;
-				padding: 10px 0;
+				margin-left: 10px;
+				padding: 8px 0;
+				text-align: center;
 			}
 			.icons {
 				display: inline;
 				margin-left: 30px;
 				img {
-					margin-left: 20px;
+					margin-left: 13px;
 				}
-			}
-		}
-
-		.coin-image {
-			min-height: 150px;
-			img {
-				position: absolute;
-				right: 10%;
-				transform: translateY(-40px);
 			}
 		}
 	}
@@ -100,18 +81,6 @@
 			input,
 			button {
 				font-size: 16px !important;
-			}
-			.coin-image {
-				display: none;
-			}
-		}
-	}
-}
-@media (max-width: 1024px) {
-	.form-section {
-		.message {
-			.coin-image {
-				display: none;
 			}
 		}
 	}

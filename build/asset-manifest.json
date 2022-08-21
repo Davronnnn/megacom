@@ -1,15 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.8ced5df3.css",
-    "main.js": "/static/js/main.fdbb9eb1.js",
-    "static/media/mainbg.png": "/static/media/mainbg.c6691b796b87282f8953.png",
-    "static/media/message-coins.png": "/static/media/message-coins.5673617e2c942b5eb169.png",
+    "main.css": "/static/css/main.893b11e8.css",
+    "main.js": "/static/js/main.69b3d1f4.js",
+    "static/media/Montserrat-SemiBold.ttf": "/static/media/Montserrat-SemiBold.d5e0cc788cba9ced1fb9.ttf",
+    "static/media/Montserrat-ExtraBold.ttf": "/static/media/Montserrat-ExtraBold.3a9ee100617f45a96d92.ttf",
+    "static/media/Montserrat-Medium.ttf": "/static/media/Montserrat-Medium.c86e3b9010ff63c99166.ttf",
+    "static/media/Montserrat-Bold.ttf": "/static/media/Montserrat-Bold.2c155811b35513d5beaa.ttf",
+    "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
+    "static/media/Montserrat-Thin.ttf": "/static/media/Montserrat-Thin.413b6b9f23ece3b343a7.ttf",
+    "static/media/hero-bg-image.png": "/static/media/hero-bg-image.a8143d7d7dd5f53f26f5.png",
+    "static/media/phone-kg.png": "/static/media/phone-kg.0e091cd4c025e17d9dcb.png",
+    "static/media/phone-img.png": "/static/media/phone-img.c3af5e0e51633a929b41.png",
+    "static/media/hero-bg-mb.png": "/static/media/hero-bg-mb.4e921e71da8f88c97837.png",
+    "static/media/phone-bg.png": "/static/media/phone-bg.a345ea374a8045348c92.png",
     "index.html": "/index.html",
-    "main.8ced5df3.css.map": "/static/css/main.8ced5df3.css.map",
-    "main.fdbb9eb1.js.map": "/static/js/main.fdbb9eb1.js.map"
+    "main.893b11e8.css.map": "/static/css/main.893b11e8.css.map",
+    "main.69b3d1f4.js.map": "/static/js/main.69b3d1f4.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ced5df3.css",
-    "static/js/main.fdbb9eb1.js"
+    "static/css/main.893b11e8.css",
+    "static/js/main.69b3d1f4.js"
   ]
 }

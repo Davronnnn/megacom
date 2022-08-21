@@ -21,7 +21,7 @@ const Registration = ({ text, lang }) => {
 		title4 = text[32]?.uz_text;
 		subtitle4 = text[33]?.uz_text;
 	}
-	if (lang === 'ru') {
+	if (lang === 'Рус') {
 		title = text[26]?.ru_text;
 		subtitle = text[27]?.ru_text;
 		title2 = text[28]?.ru_text;
@@ -53,10 +53,22 @@ const Registration = ({ text, lang }) => {
 	}
 
 	return (
-		<section className='registration-section section mtb company'>
+		<section className='registration-section section company mt'>
 			<h3 className='section__title'>{title}</h3>
-			<div className=' question-cards align-items-top mt'>
-				{/* <QuestionCard title={title2} subtitle={subtitle2} index={1} /> */}
+			<p>{subtitle}</p>
+			<div className='registration-section__content'>
+				<div className='registration-section__content-item'>
+					<h3>{title2}</h3>
+					<p>{subtitle2}</p>
+				</div>
+				<div className='registration-section__content-item'>
+					<h3>{title3}</h3>
+					<p>{subtitle3}</p>
+				</div>
+				<div className='registration-section__content-item'>
+					<h3>{title4}</h3>
+					<p>{subtitle4}</p>
+				</div>
 			</div>
 		</section>
 	);
