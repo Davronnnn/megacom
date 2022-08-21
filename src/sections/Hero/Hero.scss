@@ -81,6 +81,9 @@
 			font-size: 14px;
 			line-height: 140%;
 		}
+		&__button:nth-child(1) {
+			margin-right: 0;
+		}
 		&__bg {
 			margin-top: 100px;
 			top: 100%;
