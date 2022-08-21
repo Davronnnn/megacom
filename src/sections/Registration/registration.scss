@@ -27,23 +27,16 @@
 			z-index: 30;
 
 			display: block;
-			background-color: #00c642;
-			transform: translate(-50%, -50%);
-
+			// background-color: #00c642;
+			transform: translate(-50%, -60%);
+			color: #00c642;
 			font-family: 'Montserrat-Bold';
 			font-style: normal;
 			font-weight: 800;
 			font-size: 150px;
 			text-align: center;
-			font-feature-settings: 'salt' on, 'liga' off;
-			background: linear-gradient(
-				180deg,
-				rgba(0, 198, 66, 0.5) 0%,
-				rgba(39, 144, 59, 0.5) 100%
-			);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
+			z-index: 0;
+			opacity: 0.5;
 		}
 		&-item:nth-child(1)::before {
 			content: '1';
