@@ -37,6 +37,12 @@ const Footer = ({ text, lang }) => {
 					{lang === 'en' ? text[37]?.en_text : ''}
 					{lang === 'kz' ? text[37]?.kg_text : ''}
 				</p>
+				<p className='footer-bottom__2'>
+					{lang === 'uz' ? text[49]?.uz_text : ''}
+					{lang === 'Рус' ? text[49]?.ru_text : ''}
+					{lang === 'en' ? text[49]?.en_text : ''}
+					{lang === 'kz' ? text[49]?.kg_text : ''}
+				</p>
 			</div>
 		</footer>
 	);
