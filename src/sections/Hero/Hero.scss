@@ -58,6 +58,49 @@
 		background-color: rgba(0, 198, 66, 1);
 	}
 }
+@media (max-width: 1200px) {
+	.hero {
+		margin-top: 120px;
+		&__content {
+			text-align: center;
+			padding-left: 10px;
+			padding-right: 10px;
+			max-width: 100%;
+			&__picture img {
+				transform: translateX(10%);
+			}
+
+			&__text {
+				font-size: 16px;
+				line-height: 140%;
+				text-align: center;
+			}
+		}
+		&__button a,
+		&__button {
+			font-size: 14px;
+			line-height: 140%;
+		}
+		&__button:nth-child(1) {
+			margin-right: 100px;
+		}
+		&__bg {
+			margin-top: 10px;
+			top: 100%;
+			width: 100%;
+			&-picture {
+				width: 100%;
+
+				img {
+					width: 100%;
+					height: auto;
+					transform: translateX(-10%);
+				}
+			}
+		}
+	}
+}
+
 @media (max-width: 768px) {
 	.hero {
 		margin-top: 120px;

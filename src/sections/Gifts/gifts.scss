@@ -87,7 +87,21 @@
 		}
 	}
 }
+@media screen and (max-width: 1200px) {
+	.gifts {
+		margin-top: 450px;
+	}
+}
+@media screen and (max-width: 960px) {
+	.gifts {
+		margin-top: 350px;
 
+		.cards {
+			gap: 0px;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
 @media screen and (max-width: 768px) {
 	.gifts {
 		margin-top: 350px;

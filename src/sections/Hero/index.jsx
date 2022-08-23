@@ -3,7 +3,6 @@ import { Link } from 'react-scroll';
 
 import './Hero.scss';
 import heroImg from '../../assets/hero-bg-image.png';
-import heroImgMb from '../../assets/hero-bg-mb.png';
 import heroTitleImg from '../../assets/hero-title.png';
 import heroTitleImgMB from '../../assets/hero-title-mb.png';
 const Hero = ({ load, lang, setLang, setLoad, text }) => {
@@ -47,10 +46,17 @@ const Hero = ({ load, lang, setLang, setLoad, text }) => {
 						</Link>
 					</button>
 					<button className='hero__button'>
-						{/* {lang === 'uz' ? text[8]?.uz_text : ''} */}
-						{lang === 'Рус' ? text[8]?.ru_text : ''}
-						{/* {lang === 'en' ? text[8]?.en_text : ''} */}
-						{lang === 'kz' ? text[8]?.kg_text : ''}
+						<Link
+							to='company'
+							spy={true}
+							smooth={true}
+							offset={50}
+							duration={2000}>
+							{/* {lang === 'uz' ? text[8]?.uz_text : ''} */}
+							{lang === 'Рус' ? text[8]?.ru_text : ''}
+							{/* {lang === 'en' ? text[8]?.en_text : ''} */}
+							{lang === 'kz' ? text[8]?.kg_text : ''}
+						</Link>
 					</button>
 				</div>
 			</div>

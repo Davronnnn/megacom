@@ -62,7 +62,7 @@
 		}
 	}
 }
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
 	.header {
 		.logo {
 			margin-right: 20px;
@@ -73,6 +73,26 @@
 			#lang {
 				margin: 0 10px;
 				font-size: 12px;
+			}
+			a {
+				margin-left: 2px;
+			}
+		}
+	}
+}
+@media (max-width: 865px) {
+	.header {
+		.logo {
+			margin-right: 10px;
+			img {
+				width: 140px;
+			}
+		}
+		.nav__links {
+			p,
+			select,
+			#lang {
+				margin: 0 5px;
 			}
 			a {
 				margin-left: 2px;
