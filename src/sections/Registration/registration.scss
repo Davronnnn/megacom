@@ -19,6 +19,34 @@
 
 		&-item {
 			position: relative;
+
+			h3 {
+				margin: 0 5%;
+				font-family: 'Montserrat-Medium';
+				font-style: normal;
+				font-weight: 500;
+				font-size: 28px;
+				line-height: 34px;
+				text-align: center;
+				font-feature-settings: 'salt' on, 'liga' off;
+
+				color: #ffffff;
+			}
+			p {
+				margin: 11px 15% 0;
+
+				font-family: 'Montserrat-Thin';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 26px;
+				/* or 162% */
+
+				text-align: center;
+				font-feature-settings: 'salt' on, 'liga' off;
+
+				color: #ffffff;
+			}
 		}
 		&-item::before {
 			position: absolute;
@@ -29,7 +57,17 @@
 			display: block;
 			// background-color: #00c642;
 			transform: translate(-50%, -65%);
-			color: #00c642;
+			// color: #00c642;
+			background: linear-gradient(
+				180deg,
+				rgba(0, 198, 66, 0.5) 0%,
+				rgba(39, 144, 59, 0.5) 100%
+			);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+
 			font-family: 'Montserrat-Bold';
 			font-style: normal;
 			font-weight: 800;

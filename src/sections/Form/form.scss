@@ -1,22 +1,29 @@
 .form {
 	&__message {
 		padding: 42px 220px;
-		background: #151515;
 		border-radius: 12px;
+
+		background: #151515;
 		color: #ffffff;
+
+		text-align: center;
 
 		.submits {
 			display: flex;
-			justify-content: space-evenly;
 			margin-top: 31px;
+			justify-content: center;
+
 			input {
+				width: 50%;
 				padding: 17.5px 24px;
 
 				background-color: transparent;
 				border: 1px solid #00c642;
 				border-radius: 10px;
 
+				font-family: 'Montserrat-Medium';
 				font-size: 20px;
+
 				line-height: 140%;
 
 				color: #ffffff;
@@ -26,16 +33,19 @@
 			}
 
 			button {
-				background-color: transparent;
+				margin-left: 20px;
+				padding: 17.5px 57.5px;
+
 				border: 1px solid #00c642;
 				border-radius: 10px;
 
+				background-color: transparent;
+
+				font-family: 'Montserrat-Medium';
 				font-size: 20px;
 				line-height: 140%;
 
 				cursor: pointer;
-				padding: 17.5px 57.5px;
-				margin-left: 20px;
 			}
 		}
 
@@ -64,7 +74,7 @@
 		}
 	}
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
 	.form {
 		&__message {
 			text-align: center;
@@ -97,6 +107,7 @@
 					line-height: 22px;
 				}
 				.icons {
+					display: block;
 					margin-top: 8px;
 					a:nth-child(1) {
 						img {

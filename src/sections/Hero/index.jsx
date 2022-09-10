@@ -9,7 +9,7 @@ import heroTitleKg from '../../assets/hero-title-kg.png';
 const Hero = ({ load, lang, setLang, setLoad, text }) => {
 	return (
 		<section className='hero'>
-			<div className='hero__content'>
+			<div className='hero__content wow fadeInUp'>
 				{lang === 'Рус' ? (
 					<picture className='hero__content__picture'>
 						<source
@@ -43,7 +43,7 @@ const Hero = ({ load, lang, setLang, setLoad, text }) => {
 					''
 				)}
 				<p
-					className='wow fadeInUp hero__content__text'
+					className=' hero__content__text'
 					data-wow-duration='0.6s'
 					data-wow-delay='0.3s'>
 					{/* {lang === 'uz' ? text[6]?.uz_text : ''} */}

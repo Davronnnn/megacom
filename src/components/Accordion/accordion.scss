@@ -1,10 +1,16 @@
 .accordion {
 	color: rgba(255, 255, 255, 1);
 	.accordion-wrapper {
+		width: 75%;
 		margin-top: 24px;
 		border: none;
 		& + * {
 			margin-top: 0.5em;
+		}
+	}
+	@media only screen and (max-width: 1200px) {
+		.accordion-wrapper {
+			width: 100%;
 		}
 	}
 
@@ -24,7 +30,14 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 0.5em 1.5em;
+		padding: 0;
+
+		font-family: 'Montserrat-Regular';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 140%;
+		/* or 25px */
 
 		font-size: 24px;
 		line-height: 140%;
@@ -33,9 +46,9 @@
 
 		&::after {
 			content: '+';
-			width: 5%;
-			height: 5%;
-			margin-left: 30px;
+			width: 24px;
+			height: 24px;
+			font-size: 35px;
 		}
 
 		&.open {
@@ -47,8 +60,15 @@
 	}
 
 	.accordion-content {
-		padding: 0.2em 1.5em;
+		padding: 24px 0;
 		font-size: 18px;
 		line-height: 140%;
+
+		font-family: 'Montserrat-Regular';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 140%;
+		/* or 25px */
 	}
 }

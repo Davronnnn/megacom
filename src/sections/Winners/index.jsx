@@ -82,6 +82,7 @@ const WinnersList = ({ text, lang }) => {
 								<td>{winner.date}</td>
 								<td>{winner.phone_number}</td>
 								<td>{winner.prize}</td>
+								{/* <div className='custom-border-bottom'></div> */}
 							</tr>
 						))}
 					</tbody>
