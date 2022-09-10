@@ -52,10 +52,12 @@
 	&__button:nth-child(1) {
 		margin-right: 24px;
 	}
+	&__button-active,
 	&__button:hover,
 	&__button:focus,
 	&__button:active {
 		background-color: rgba(0, 198, 66, 1);
+		border: none;
 	}
 }
 @media (max-width: 1200px) {
