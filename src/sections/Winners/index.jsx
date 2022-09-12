@@ -15,8 +15,7 @@ const WinnersList = ({ text, lang }) => {
 			.get('https://backend.megacom.win/translation/get-winners')
 
 			.then((res) => {
-				setWinners(res.data);
-				console.log(res.data);
+				setWinners(res.data?.reverse());
 			});
 	}, []);
 
