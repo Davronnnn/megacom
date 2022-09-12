@@ -3,7 +3,7 @@ import axios from 'axios';
 import Pagination from '../../components/Pagination';
 import './winner.scss';
 
-let PageSize = 7;
+let PageSize = 10;
 const WinnersList = ({ text, lang }) => {
 	const [winners, setWinners] = useState([]);
 	const [title, setTitle] = useState('');
@@ -16,6 +16,7 @@ const WinnersList = ({ text, lang }) => {
 
 			.then((res) => {
 				setWinners(res.data);
+				console.log(res.data);
 			});
 	}, []);
 
@@ -43,7 +44,6 @@ const WinnersList = ({ text, lang }) => {
 		const lastPageIndex = firstPageIndex + PageSize;
 		return winners.slice(firstPageIndex, lastPageIndex);
 	}, [currentPage, winners]);
-
 	return (
 		<section className='winner-section section winners mt'>
 			<h3 className='section__title'>{title}</h3>
