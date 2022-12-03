@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 
-import logo from '../../assets/header-logo.png';
-import logoSm from '../../assets/header-logo-mb.png';
+import logo from '../../assets/logo.png';
+// import logoSm from '../../assets/header-logo-mb.png';
 import './Header.scss';
 
 const Header = ({ load, setLoad, text, lang, setLang }) => {
@@ -72,8 +72,8 @@ const Header = ({ load, setLoad, text, lang, setLang }) => {
 				rel='noreferrer'
 				href='http://megacom.kg'>
 				<picture>
-					<source srcSet={logoSm} media='(max-width: 1100px)' />
-					<img src={logo} alt='logo' />
+					{/* <source srcSet={logoSm} media='(max-width: 1100px)' /> */}
+					<img width='200' src={logo} alt='logo' />
 				</picture>
 			</a>
 
