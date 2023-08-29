@@ -20,7 +20,7 @@ const HomePage = () => {
 	const [load, setLoad] = useState(true);
 	const [text, setText] = useState([]);
 
-	const [lang, setLang] = useState('Рус');
+	const [lang, setLang] = useState(localStorage.getItem('lang') ?  localStorage.getItem('lang') : "Рус");
 
 	useEffect(() => {
 		setLoad(true);
@@ -36,12 +36,6 @@ const HomePage = () => {
 			});
 	}, []);
 
-	useEffect(() => {
-		if (localStorage.getItem('lang')) {
-			setLang(localStorage.getItem('lang'));
-		}
-		setLoad(false);
-	}, [load]);
 
 	if (load) return <Loader />;
 	return (
