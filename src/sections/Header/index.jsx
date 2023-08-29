@@ -19,7 +19,8 @@ const Header = ({ load, setLoad, text, lang, setLang }) => {
 
 	function translation(e) {
 		localStorage.setItem('lang', e.target.value);
-		setLoad(true);
+		// setLoad(true);
+		setLang(e.target.value)
 	}
 	const handleClick = () => {
 		setOpen((e) => !e);
