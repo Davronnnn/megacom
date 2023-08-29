@@ -3,45 +3,19 @@ import { Link } from 'react-scroll';
 
 import './Hero.scss';
 import heroImg from '../../assets/hero-bg-image.png';
-import heroTitleImg from '../../assets/hero-title.png';
-import heroTitleImgMB from '../../assets/hero-title-mb.png';
-import heroTitleKg from '../../assets/hero-title-kg.png';
+
+
+
 const Hero = ({ load, lang, setLang, setLoad, text }) => {
 	return (
 		<section className='hero'>
 			<div className='hero__content wow fadeInUp'>
-				{lang === 'Рус' ? (
-					<picture className='hero__content__picture'>
-						<source
-							media='(max-width: 769px)'
-							srcSet={heroTitleImgMB}
-						/>
+	
 
-						<img
-							className='wow fadeIn'
-							data-wow-duration='0.5s'
-							data-wow-delay='0.2s'
-							src={heroTitleImg}
-							alt='hero-bg'
-						/>
-					</picture>
-				) : (
-					''
-				)}
-				{lang === 'kz' ? (
-					<picture className='hero__content__picture'>
-						<img
-							className='wow fadeIn'
-							data-wow-duration='0.5s'
-							data-wow-delay='0.2s'
-							src={heroTitleKg}
-							width='100%'
-							alt='hero-bg'
-						/>
-					</picture>
-				) : (
-					''
-				)}
+				<h1 className='hero__content__title'>
+					{lang === "Рус" ? "ВЫИГРАЙ" : "УТУП АЛ" } 	
+				</h1>
+				<h4 className='hero__content__price'>3 000 000</h4>
 				<p
 					className=' hero__content__text'
 					data-wow-duration='0.6s'
