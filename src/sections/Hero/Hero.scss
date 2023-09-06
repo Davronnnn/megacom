@@ -8,7 +8,7 @@
 
     &__content {
         position: relative;
-        z-index: 2;
+        z-index: 4;
         max-width: 550px;
         &__picture img {
             transform: translateX(-10%);
@@ -54,6 +54,7 @@
         img:nth-child(1){
             position: relative;
             width: 20vw;
+            z-index: 3;
         }
         img:nth-child(2){
             position: absolute;
@@ -63,6 +64,7 @@
         } img:nth-child(3){
             position: relative;
             width: 30vw;
+            z-index: 3;
         }
     }
 
@@ -174,14 +176,28 @@
             margin-top: 100px;
             top: 100%;
             width: 100%;
+
+
+            img:nth-child(1){
+                position: relative;
+                width: 250px;
+                transform: translateY(-30px);
+            }
+            img:nth-child(2){
+                position: absolute;
+                width: 300px;
+                top: -15%;
+                left: 0;
+                // left: 10%;
+            } img:nth-child(3){
+                position: relative;
+                width: 300px;
+                transform: translateY(-30px);
+            }
             &-picture {
                 width: 100%;
 
-                img {
-                    width: 100%;
-                    height: auto;
-                    transform: translateX(-10%);
-                }
+               
             }
         }
     }
