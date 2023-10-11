@@ -8,7 +8,11 @@
 
     &__content {
         position: relative;
+<<<<<<< HEAD
         z-index: 2;
+=======
+        z-index: 4;
+>>>>>>> 76abfb7bc60688a7329fc52fc049da42195dad27
         max-width: 550px;
         &__picture img {
             transform: translateX(-10%);
@@ -47,6 +51,7 @@
     }
     &__bg {
         position: absolute;
+<<<<<<< HEAD
         top: 200px;
         right: 0;
         transform: translateX(12%);
@@ -67,6 +72,44 @@
         line-height: 140%;
         color: #ffffff;
 
+=======
+        top: 0px;
+        right: 0;
+        transform: translateX(12%);
+
+        img:nth-child(1){
+            position: relative;
+            width: 20vw;
+            z-index: 3;
+        }
+        img:nth-child(2){
+            position: absolute;
+            width: 40vw;
+            top: -20%;
+            left: 10%;
+        } img:nth-child(3){
+            position: relative;
+            width: 30vw;
+            z-index: 3;
+        }
+    }
+
+    &__button {
+        margin-top: 50px;
+        padding: 11.5px 40px;
+
+        background-color: transparent;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+
+        font-family: "Montserrat-Medium";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+        color: #ffffff;
+
+>>>>>>> 76abfb7bc60688a7329fc52fc049da42195dad27
         transition: background-color 0.3s ease-in-out;
         outline: none;
         cursor: pointer;
@@ -160,6 +203,7 @@
             margin-top: 100px;
             top: 100%;
             width: 100%;
+<<<<<<< HEAD
             &-picture {
                 width: 100%;
 
@@ -168,6 +212,30 @@
                     height: auto;
                     transform: translateX(-10%);
                 }
+=======
+
+
+            img:nth-child(1){
+                position: relative;
+                width: 250px;
+                transform: translateY(-30px);
+            }
+            img:nth-child(2){
+                position: absolute;
+                width: 300px;
+                top: -15%;
+                left: 0;
+                // left: 10%;
+            } img:nth-child(3){
+                position: relative;
+                width: 300px;
+                transform: translateY(-30px);
+            }
+            &-picture {
+                width: 100%;
+
+               
+>>>>>>> 76abfb7bc60688a7329fc52fc049da42195dad27
             }
         }
     }

@@ -1,12 +1,48 @@
-import React from 'react';
+import React,{useEffect,useRef} from 'react';
 import { Link } from 'react-scroll';
 
 import './Hero.scss';
+<<<<<<< HEAD
 import heroImg from '../../assets/hero-bg-image.png';
+=======
+import heroMoney1 from '../../assets/money1.png';
+import heroMoney2 from '../../assets/money2.png';
+import heroMoney3 from '../../assets/money3.png';
+>>>>>>> 76abfb7bc60688a7329fc52fc049da42195dad27
 
 
 
 const Hero = ({ load, lang, setLang, setLoad, text }) => {
+
+	const img1 = useRef()
+	const img2 = useRef()
+	const img3= useRef()
+
+	// useEffect(() => {
+	  
+	
+	  
+	// }, []);
+
+	document.addEventListener('mousemove', (e) => {
+		// Get the current cursor position
+		const x = e.clientX;
+		const y = e.clientY;
+		const random = Math.random();
+	
+		// Define different positions for each element
+		const position1 = { x: x/10 , y: -y / 5 };
+		const position2 = { x: -x/40 , y: -y/20  };
+		const position3 = { x: x / 15, y: y / 15 };
+	
+		// Update the elements' positions with smoother transitions
+		img1.current.style.transform = `translate(${position1.x}px, ${position1.y}px)`;
+		img2.current.style.transform = `translate(${position2.x}px, ${position2.y}px)`;
+		img3.current.style.transform = `translate(${position3.x}px, ${position3.y}px)`;
+	});
+	
+
+
 	return (
 		<section className='hero'>
 			<div className='hero__content wow fadeInUp'>
@@ -56,7 +92,7 @@ const Hero = ({ load, lang, setLang, setLoad, text }) => {
 			</div>
 
 			<div className='hero__bg'>
-				<picture className='hero__bg-picture'>
+				{/* <picture className='hero__bg-picture'>
 					<img
 						data-wow-duration='0.5s'
 						data-wow-delay='0.2s'
@@ -65,7 +101,10 @@ const Hero = ({ load, lang, setLang, setLoad, text }) => {
 						height='327'
 						alt='hero-bg'
 					/>
-				</picture>
+				</picture> */}
+				<img ref={img1} src={heroMoney1} alt="hero money" />
+				<img ref={img2} src={heroMoney2} alt="hero money" />
+				<img ref={img3} src={heroMoney3} alt="hero money" />
 			</div>
 		</section>
 	);
