@@ -1,15 +1,10 @@
 {
   "files": {
-<<<<<<< HEAD
-    "main.css": "/static/css/main.e6b8c5fd.css",
-    "main.js": "/static/js/main.35f2b413.js",
-=======
     "main.css": "/static/css/main.9795fabc.css",
-    "main.js": "/static/js/main.5ffc2fe3.js",
+    "main.js": "/static/js/main.cefeb6c0.js",
     "static/media/money2.png": "/static/media/money2.fbef52e85c30e484ce85.png",
     "static/media/money3.png": "/static/media/money3.84e11d303a34c5a59cd6.png",
     "static/media/money1.png": "/static/media/money1.9ded95259362121ce24a.png",
->>>>>>> 76abfb7bc60688a7329fc52fc049da42195dad27
     "static/media/Montserrat-SemiBold.ttf": "/static/media/Montserrat-SemiBold.d5e0cc788cba9ced1fb9.ttf",
     "static/media/Montserrat-ExtraBold.ttf": "/static/media/Montserrat-ExtraBold.3a9ee100617f45a96d92.ttf",
     "static/media/Montserrat-Medium.ttf": "/static/media/Montserrat-Medium.c86e3b9010ff63c99166.ttf",
@@ -17,23 +12,15 @@
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.ceb11275ab638627a643.ttf",
     "static/media/Montserrat-Thin.ttf": "/static/media/Montserrat-Thin.413b6b9f23ece3b343a7.ttf",
     "static/media/logo.png": "/static/media/logo.db31c8b76fc782828e46.png",
+    "static/media/hero-bg-image.png": "/static/media/hero-bg-image.a8143d7d7dd5f53f26f5.png",
     "static/media/phone-kg.png": "/static/media/phone-kg.0e091cd4c025e17d9dcb.png",
     "static/media/phone-img.png": "/static/media/phone-img.c3af5e0e51633a929b41.png",
     "index.html": "/index.html",
-<<<<<<< HEAD
-    "main.e6b8c5fd.css.map": "/static/css/main.e6b8c5fd.css.map",
-    "main.35f2b413.js.map": "/static/js/main.35f2b413.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.e6b8c5fd.css",
-    "static/js/main.35f2b413.js"
-=======
     "main.9795fabc.css.map": "/static/css/main.9795fabc.css.map",
-    "main.5ffc2fe3.js.map": "/static/js/main.5ffc2fe3.js.map"
+    "main.cefeb6c0.js.map": "/static/js/main.cefeb6c0.js.map"
   },
   "entrypoints": [
     "static/css/main.9795fabc.css",
-    "static/js/main.5ffc2fe3.js"
->>>>>>> 76abfb7bc60688a7329fc52fc049da42195dad27
+    "static/js/main.cefeb6c0.js"
   ]
 }
