@@ -2,13 +2,10 @@ import React,{useEffect,useRef} from 'react';
 import { Link } from 'react-scroll';
 
 import './Hero.scss';
-<<<<<<< HEAD
 import heroImg from '../../assets/hero-bg-image.png';
-=======
 import heroMoney1 from '../../assets/money1.png';
 import heroMoney2 from '../../assets/money2.png';
 import heroMoney3 from '../../assets/money3.png';
->>>>>>> 76abfb7bc60688a7329fc52fc049da42195dad27
 
 
 
